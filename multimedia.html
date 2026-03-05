@@ -12,7 +12,7 @@
 
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <a class="navbar-brand fw-bold" href="index.html">📘 Blog HTML</a>
+    <a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
     <a class="nav-link" href="index.html">Inicio</a>
     <a class="nav-link" href="estructurales.html">Estructurales</a>
     <a class="nav-link" href="texto.html">Texto</a>
@@ -36,13 +36,18 @@
 
     <!-- img -->
     <div class="card mb-3">
-      <div class="card-header bg-dark text-white">&lt;img&gt;</div>
+      <div>&lt;img&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Inserta una imagen en el documento. Es una etiqueta vacía; la imagen se carga desde la ruta indicada en el atributo src. El atributo alt es obligatorio.</p>
         <p><b>Sintaxis básica:</b></p>
         <pre>&lt;img src="foto.jpg"
      alt="Descripción de la imagen"
      width="300" height="300"&gt;</pre>
+
+     <p><b>Ejemplo visual:</b></p>
+<div style="border: 1px solid #dee2e6; border-radius: 5px; padding: 15px; background: #f8f9fa;">
+  <img src="img/images.jpg" alt="Imagen de ejemplo" width="300">
+</div>
         <p><b>Uso adecuado:</b> Para imágenes que forman parte del contenido. Si la imagen es decorativa usar alt="" vacío para que los lectores de pantalla la ignoren.</p>
         <p><b>Buenas prácticas:</b></p>
         <ul>
@@ -56,7 +61,7 @@
 
     <!-- video -->
     <div class="card mb-3">
-      <div class="card-header bg-dark text-white">&lt;video&gt;</div>
+      <div>&lt;video&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Incrusta un reproductor de video nativo directamente en la página. Admite múltiples fuentes con la etiqueta source para garantizar compatibilidad entre navegadores.</p>
         <p><b>Sintaxis básica:</b></p>
@@ -65,6 +70,14 @@
   &lt;source src="video.webm" type="video/webm"&gt;
   &lt;p&gt;Tu navegador no soporta video HTML5.&lt;/p&gt;
 &lt;/video&gt;</pre>
+
+<p><b>Ejemplo visual:</b></p>
+<div style="border: 1px solid #dee2e6; border-radius: 5px; padding: 15px; background: #f8f9fa;">
+  <video controls width="400">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+</div>
         <p><b>Uso adecuado:</b> El texto entre las etiquetas sirve de mensaje alternativo para navegadores muy antiguos que no soporten HTML5.</p>
         <p><b>Buenas prácticas:</b></p>
         <ul>
@@ -77,7 +90,7 @@
 
     <!-- audio -->
     <div class="card mb-3">
-      <div class="card-header bg-dark text-white">&lt;audio&gt;</div>
+      <div>&lt;audio&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Incrusta un reproductor de audio nativo en la página. Funciona de manera similar a video pero solo para contenido de sonido.</p>
         <p><b>Sintaxis básica:</b></p>
@@ -86,6 +99,15 @@
   &lt;source src="audio.ogg" type="audio/ogg"&gt;
   Tu navegador no soporta audio HTML5.
 &lt;/audio&gt;</pre>
+
+<p><b>Ejemplo visual:</b></p>
+<div style="border: 1px solid #dee2e6; border-radius: 5px; padding: 15px; background: #f8f9fa;">
+  <audio controls>
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+</div>
+
         <p><b>Uso adecuado:</b> Podcasts, efectos de sonido o música de fondo.</p>
         <p><b>Buenas prácticas:</b></p>
         <ul>
@@ -98,7 +120,7 @@
 
     <!-- iframe -->
     <div class="card mb-3">
-      <div class="card-header bg-dark text-white">&lt;iframe&gt;</div>
+      <div>&lt;iframe&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Permite incrustar contenido externo dentro de la página, como videos de YouTube, mapas de Google Maps o documentos PDF, en un marco independiente.</p>
         <p><b>Sintaxis básica:</b></p>

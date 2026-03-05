@@ -12,7 +12,7 @@
 
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <a class="navbar-brand fw-bold" href="index.html">📘 Blog HTML</a>
+    <a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
     <a class="nav-link" href="index.html">Inicio</a>
     <a class="nav-link" href="estructurales.html">Estructurales</a>
     <a class="nav-link" href="texto.html">Texto</a>
@@ -36,7 +36,7 @@
 
     <!-- form -->
     <div class="card mb-3">
-      <div class="card-header bg-danger text-white">&lt;form&gt;</div>
+      <div>&lt;form&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Contenedor principal de un formulario. Define hacia dónde se envían los datos (atributo action) y el método de envío (atributo method: get o post).</p>
         <p><b>Sintaxis básica:</b></p>
@@ -55,7 +55,7 @@
 
     <!-- input -->
     <div class="card mb-3">
-      <div class="card-header bg-danger text-white">&lt;input&gt;</div>
+      <div>&lt;input&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Campo de entrada más versátil del formulario. Cambia completamente su comportamiento según el valor del atributo type: texto, contraseña, email, checkbox, radio, fecha, archivo, etc.</p>
         <p><b>Sintaxis básica:</b></p>
@@ -75,7 +75,7 @@
 
     <!-- label -->
     <div class="card mb-3">
-      <div class="card-header bg-danger text-white">&lt;label&gt;</div>
+      <div>&lt;label&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> Etiqueta descriptiva de un campo. Indica al usuario qué información debe escribir. Al hacer clic en el label, el cursor se mueve automáticamente al campo asociado.</p>
         <p><b>Sintaxis básica:</b></p>
@@ -92,7 +92,7 @@
 
     <!-- select, textarea, button -->
     <div class="card mb-3">
-      <div class="card-header bg-danger text-white">&lt;select&gt;, &lt;textarea&gt; y &lt;button&gt;</div>
+      <div>&lt;select&gt;, &lt;textarea&gt; y &lt;button&gt;</div>
       <div class="card-body">
         <p><b>Definición:</b> select crea un menú desplegable de opciones. textarea permite escribir texto en múltiples líneas. button crea un botón que puede enviar el formulario, limpiarlo o ejecutar una acción con JavaScript.</p>
         <p><b>Sintaxis básica:</b></p>
@@ -116,6 +116,55 @@
       </div>
     </div>
 
+    <!-- FORMULARIO FUNCIONAL -->
+<div class="card p-4 mb-4">
+  <h3 class="mb-3">Formulario de Contacto</h3>
+  <p>Este es un ejemplo de formulario funcional que usa las etiquetas explicadas en esta sección.</p>
+
+  <form id="miFormulario">
+
+    <div class="mb-3">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@email.com" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="categoria">Categoría de interés:</label>
+      <select class="form-control" id="categoria" name="categoria">
+        <option value="">Selecciona una categoría</option>
+        <option value="estructurales">Estructurales</option>
+        <option value="texto">Texto</option>
+        <option value="listas">Listas</option>
+        <option value="tablas">Tablas</option>
+        <option value="multimedia">Multimedia</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="mensaje">Mensaje:</label>
+      <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <input type="checkbox" id="terminos" name="terminos" required>
+      <label for="terminos"> Acepto los términos y condiciones</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+    <button type="reset" class="btn btn-secondary ms-2">Limpiar</button>
+
+  </form>
+
+  <div id="mensajeExito" style="display:none;" class="alert alert-success mt-3">
+     ¡Mensaje enviado correctamente! Gracias por contactarnos.
+  </div>
+
+</div>
     <hr>
     <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
 

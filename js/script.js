@@ -14,3 +14,9 @@ function buscar() {
     }
   });
 }
+
+document.getElementById("miFormulario").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("miFormulario").style.display = "none";
+  document.getElementById("mensajeExito").style.display = "block";
+});
