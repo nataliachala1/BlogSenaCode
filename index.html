@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Blog Educativo - Etiquetas HTML</title>
+</head>
+
+<body>
+
+<!-- Título principal -->
+<h1>Blog Educativo: Etiquetas HTML por Categorías</h1>
+
+<p>Referencia práctica con definiciones, sintaxis, ejemplos y buenas prácticas para cada etiqueta.</p>
+
+<hr>
+
+<!-- ESTRUCTURALES  -->
+
+<div>
+<h2>1. Etiquetas Estructurales</h2>
+
+<!-- HTML -->
+<h3>&lt;html&gt;</h3>
+
+<p><b>Definición:</b> Es el elemento raíz de todo documento HTML.</p>
+
+<p><b>Ejemplo:</b></p>
+
+<pre>
+&lt;html&gt;
+  ...
+&lt;/html&gt;
+</pre>
+
+<ul>
+<li>Debe ir después de DOCTYPE.</li>
+<li>Contiene head y body.</li>
+</ul>
+
+<!-- HEAD -->
+<h3>&lt;head&gt;</h3>
+
+<p><b>Definición:</b> Contiene información sobre la página.</p>
+
+<pre>
+&lt;head&gt;
+&lt;title&gt;Título&lt;/title&gt;
+&lt;/head&gt;
+</pre>
+
+<ul>
+<li>Incluye metadatos.</li>
+<li>No se muestra en pantalla.</li>
+</ul>
+
+<!-- BODY -->
+<h3>&lt;body&gt;</h3>
+
+<p><b>Definición:</b> Contiene todo el contenido visible de la página.</p>
+
+<pre>
+&lt;body&gt;
+Contenido visible
+&lt;/body&gt;
+</pre>
+
+<ul>
+<li>Solo puede haber uno.</li>
+<li>Aquí van textos, imágenes y tablas.</li>
+</ul>
+
+</div>
+
+<hr>
+
+<!-- TEXTO  -->
+
+<div>
+<h2>2. Etiquetas de Texto</h2>
+
+<h3>&lt;h1&gt; - &lt;h6&gt;</h3>
+
+<p><b>Definición:</b> Son títulos que organizan el contenido.</p>
+
+<pre>
+&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+</pre>
+
+<ul>
+<li>h1 es el más importante.</li>
+<li>h6 es el menos importante.</li>
+</ul>
+
+<h3>&lt;p&gt;</h3>
+
+<p><b>Definición:</b> Sirve para escribir párrafos de texto.</p>
+
+<pre>
+&lt;p&gt;Este es un párrafo&lt;/p&gt;
+</pre>
+
+<ul>
+<li>Es la etiqueta de texto más usada.</li>
+</ul>
+
+<h3>&lt;strong&gt; y &lt;em&gt;</h3>
+
+<p><b>Definición:</b> strong marca texto importante y em agrega énfasis.</p>
+
+<pre>
+&lt;p&gt;Esto es &lt;strong&gt;importante&lt;/strong&gt;&lt;/p&gt;
+</pre>
+
+</div>
+
+<hr>
+
+<!--  LISTAS -->
+
+<div>
+<h2>3. Listas</h2>
+
+<h3>&lt;ul&gt;</h3>
+
+<p><b>Definición:</b> Lista con viñetas.</p>
+
+<pre>
+&lt;ul&gt;
+&lt;li&gt;Elemento&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<ul>
+<li>El orden no importa.</li>
+</ul>
+
+<h3>&lt;ol&gt;</h3>
+
+<p><b>Definición:</b> Lista numerada.</p>
+
+<pre>
+&lt;ol&gt;
+&lt;li&gt;Paso 1&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<ul>
+<li>Se usa cuando el orden importa.</li>
+</ul>
+
+</div>
+
+<hr>
+
+<!-- FORMULARIOS -->
+
+<div>
+<h2>4. Formularios</h2>
+
+<h3>&lt;form&gt;</h3>
+
+<p><b>Definición:</b> Contenedor de campos para enviar datos.</p>
+
+<pre>
+&lt;form&gt;
+...
+&lt;/form&gt;
+</pre>
+
+<h3>&lt;input&gt;</h3>
+
+<p><b>Definición:</b> Campo para escribir información.</p>
+
+<pre>
+&lt;input type="text"&gt;
+</pre>
+
+<h3>&lt;label&gt;</h3>
+
+<p><b>Definición:</b> Texto que describe un campo del formulario.</p>
+
+<pre>
+&lt;label&gt;Nombre&lt;/label&gt;
+</pre>
+
+</div>
+
+<hr>
+
+<!-- TABLAS  -->
+
+<div>
+<h2>5. Tablas</h2>
+
+<h3>&lt;table&gt;</h3>
+
+<p><b>Definición:</b> Se usa para mostrar datos en filas y columnas.</p>
+
+<pre>
+&lt;table&gt;
+...
+&lt;/table&gt;
+</pre>
+
+<h3>&lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</h3>
+
+<p><b>Definición:</b></p>
+
+<ul>
+<li>tr = fila</li>
+<li>th = encabezado</li>
+<li>td = celda de datos</li>
+</ul>
+
+</div>
+
+<hr>
+
+<!--  MULTIMEDIA -->
+
+<div>
+<h2>6. Multimedia</h2>
+
+<h3>&lt;img&gt;</h3>
+
+<p><b>Definición:</b> Sirve para mostrar imágenes.</p>
+
+<pre>
+&lt;img src="imagen.jpg" alt="Imagen"&gt;
+</pre>
+
+<h3>&lt;video&gt;</h3>
+
+<p><b>Definición:</b> Permite agregar videos.</p>
+
+<pre>
+&lt;video controls&gt;
+&lt;source src="video.mp4"&gt;
+&lt;/video&gt;
+</pre>
+
+<h3>&lt;audio&gt;</h3>
+
+<p><b>Definición:</b> Permite reproducir audio.</p>
+
+<pre>
+&lt;audio controls&gt;
+&lt;source src="audio.mp3"&gt;
+&lt;/audio&gt;
+</pre>
+
+</div>
+
+<hr>
+
+<!-- Pie de página -->
+<p>Blog Educativo - Actividad HTML</p>
+
+</body>
+</html>
