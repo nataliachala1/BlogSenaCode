@@ -2,7 +2,7 @@
 body {
   font-family: 'Poppins', Arial, sans-serif; 
   margin: 20px;
-  color: #222222; 
+  color: #8dc927; 
 }
 
 
@@ -65,8 +65,8 @@ nav {
 
 nav a {
   text-decoration: none;
-  background: #2563EB; 
-  color: white;
+  background: #3597e7; 
+  color: rgb(85, 224, 42);
   padding: 10px 15px;
   margin: 5px;
   border-radius: 5px;
@@ -111,12 +111,7 @@ button:hover {
 }
 
 
-#estructurales h2 { color: #FF6B6B; } 
-#texto h2 { color: #FFA500; }          
-#listas h2 { color: #34D399; }        
-#formularios h2 { color: #0EA5E9; }   
-#tablas h2 { color: #A78BFA; }         
-#multimedia h2 { color: #FACC15; }     
+  
 
 
 
