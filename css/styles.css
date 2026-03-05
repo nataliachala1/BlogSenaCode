@@ -118,3 +118,51 @@ button:hover {
 
 
 
+
+
+
+
+/* Navbar clara y minimalista */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Nombre del blog */
+.navbar-brand {
+  color: #2c3e50 !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Enlaces */
+.nav-link {
+  color: #555555 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+/* Buscador */
+.navbar .form-control {
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+}
+
+/* Botón buscar */
+.navbar .btn-outline-light {
+  border: 1px solid #cccccc;
+  color: #555555 !important;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: #f0f0f0;
+  color: #333333 !important;
+}
