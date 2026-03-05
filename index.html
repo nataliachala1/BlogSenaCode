@@ -2,599 +2,529 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
-<title>Blog Educativo - Etiquetas HTML</title>
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-
-
-</style>
-
+  <meta charset="UTF-8">
+  <title>Blog Educativo - Etiquetas HTML</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-<script src="js/script.js"></script>
-</body>
-<div class="card p-3 mb-3">
-  <h3>Hello!</h3>
-  <p>Blog creado por: Karen Daniela Holguin Cruz y Natalia Chala</p>
 
-<div id="estructurales">
-<div id="texto">
-<div id="listas">
-<div id="formularios">
-<div id="tablas">
-<div id="multimedia">
+  <!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-dark bg-dark px-3 d-flex flex-wrap gap-2 align-items-center">
 
-</div> 
+  <!-- Nombre del blog -->
+  <a class="navbar-brand fw-bold" href="#">📘 Blog HTML</a>
 
+  <!-- Enlaces directos sin collapse -->
+  <a class="nav-link text-white" href="#estructurales">Estructurales</a>
+  <a class="nav-link text-white" href="#texto">Texto</a>
+  <a class="nav-link text-white" href="#listas">Listas</a>
+  <a class="nav-link text-white" href="#formularios">Formularios</a>
+  <a class="nav-link text-white" href="#tablas">Tablas</a>
+  <a class="nav-link text-white" href="#multimedia">Multimedia</a>
 
-<body>
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="nav-link text-white" href="#estructurales">Estructurales</a>
-    <a class="nav-link text-white" href="#texto">Texto</a>
-    <a class="nav-link text-white" href="#listas">Listas</a>
-    <a class="nav-link text-white" href="#formularios">Formularios</a>
-    <a class="nav-link text-white" href="#tablas">Tablas</a>
-    <a class="nav-link text-white" href="#multimedia">Multimedia</a>
-    <input type="text" id="buscador" placeholder="Buscar etiqueta...">
-    <button class="btn btn-light btn-sm" onclick="buscar()">Buscar</button>
-  </nav>
- 
+  <!-- Buscador y botones -->
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
+    <button class="btn btn-outline-light" onclick="buscar()">Buscar</button>
 
-<h1>Blog Educativo: Etiquetas HTML</h1>
+  </div>
 
-<p>Este blog es una guía educativa sobre las etiquetas más importantes de HTML. Está organizado en seis categorías: estructurales, texto, listas, formularios, tablas y multimedia. Para cada etiqueta encontrarás su definición, un ejemplo de uso y buenas prácticas recomendadas.</p>
+</nav>
 
-<p>HTML (HyperText Markup Language) es el lenguaje base de todas las páginas web. Fue creado por Tim Berners-Lee en 1991 y desde entonces ha evolucionado hasta su versión actual, HTML5. Aprender sus etiquetas es el primer paso para construir sitios web.</p>
+  <!-- ===================== BIENVENIDA ===================== -->
+  <div class="container mt-3">
+    <div class="card p-3 mb-3">
 
-<hr>
+    <h1 class="text-center my-4">Blog Educativo: Etiquetas HTML por Categorías</h1>
 
-<!-- ESTRUCTURALES -->
+    <p>Este blog es una guía educativa sobre las etiquetas más importantes de HTML. Está organizado en seis categorías: estructurales, texto, listas, formularios, tablas y multimedia. Para cada etiqueta encontrarás su definición, un ejemplo de uso y buenas prácticas recomendadas.</p>
 
-<div>
-<h2>1. Etiquetas Estructurales</h2>
+    <p>HTML (HyperText Markup Language) es el lenguaje base de todas las páginas web. Fue creado por Tim Berners-Lee en 1991 y desde entonces ha evolucionado hasta su versión actual, HTML5. Aprender sus etiquetas es el primer paso para construir sitios web.</p>
+    </div>
+    <hr>
 
-<p>Las etiquetas estructurales definen el esqueleto de una página web. Sin ellas, el navegador no sabría cómo interpretar el documento. Son las primeras que debes aprender porque forman la base de cualquier archivo HTML.</p>
+    <!-- ===================== 1. ESTRUCTURALES ===================== -->
+    <div id="estructurales" class="mb-5">
+      <h2 class="mb-3">1. Etiquetas Estructurales</h2>
+      <p>Las etiquetas estructurales definen el esqueleto de una página web. Sin ellas, el navegador no sabría cómo interpretar el documento. Son las primeras que debes aprender porque forman la base de cualquier archivo HTML.</p>
 
-<h3>&lt;html&gt;</h3>
-
-<p><b>Definición:</b> Es la etiqueta raíz de todo documento HTML. Todo el contenido de la página debe estar dentro de ella. Le indica al navegador que el archivo está escrito en HTML.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;html lang="es"&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">&lt;html&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Es la etiqueta raíz de todo documento HTML. Todo el contenido de la página debe estar dentro de ella.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;html lang="es"&gt;
   ...
-&lt;/html&gt;
-</pre>
+&lt;/html&gt;</pre>
+          <p><b>Uso adecuado:</b> Debe aparecer justo después del DOCTYPE. Solo puede haber una por documento.</p>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre escribir el atributo lang con el idioma de la página.</li>
+            <li>No omitir el DOCTYPE antes de esta etiqueta.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Ejemplo práctico:</b></p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-  &lt;head&gt;&lt;title&gt;Mi página&lt;/title&gt;&lt;/head&gt;
-  &lt;body&gt;&lt;p&gt;Hola mundo&lt;/p&gt;&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-
-<p><b>Uso adecuado:</b> Debe aparecer justo después del DOCTYPE. Solo puede haber una etiqueta html por documento y debe contener únicamente head y body como hijos directos.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Siempre escribir el atributo lang con el idioma de la página (es, en, fr, etc.).</li>
-  <li>No poner contenido directamente dentro de html sin usar head o body.</li>
-  <li>No omitir el DOCTYPE antes de esta etiqueta.</li>
-</ul>
-
-<h3>&lt;head&gt;</h3>
-
-<p><b>Definición:</b> Contiene la información del documento que no se muestra directamente en pantalla. Dentro van el título de la página, los estilos CSS, los scripts y los metadatos como el charset o la descripción para buscadores.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;head&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">&lt;head&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Contiene la información del documento que no se muestra en pantalla: título, estilos, scripts y metadatos.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
-  &lt;title&gt;Título de la página&lt;/title&gt;
-&lt;/head&gt;
-</pre>
+  &lt;title&gt;Título&lt;/title&gt;
+&lt;/head&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Incluir siempre meta charset="UTF-8".</li>
+            <li>Escribir un title descriptivo y único en cada página.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Va siempre antes del body. Todo lo que se ponga aquí afecta el comportamiento o apariencia de la página pero no es visible para el usuario directamente.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Incluir siempre meta charset="UTF-8" para evitar problemas con tildes y caracteres especiales.</li>
-  <li>Escribir un title descriptivo y único en cada página.</li>
-  <li>Agregar la etiqueta meta viewport para que la página se vea bien en celulares.</li>
-</ul>
-
-<h3>&lt;body&gt;</h3>
-
-<p><b>Definición:</b> Contiene todo el contenido visible de la página web: textos, imágenes, videos, tablas, formularios, botones, etc. Todo lo que el usuario ve en el navegador debe estar dentro del body.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;body&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">&lt;body&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Contiene todo el contenido visible de la página: textos, imágenes, videos, tablas, formularios, etc.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;body&gt;
   &lt;h1&gt;Bienvenido&lt;/h1&gt;
-  &lt;p&gt;Este es el contenido de mi página.&lt;/p&gt;
-&lt;/body&gt;
-</pre>
+  &lt;p&gt;Contenido de la página.&lt;/p&gt;
+&lt;/body&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Solo puede existir un body por documento.</li>
+            <li>No usar atributos visuales en línea; usar CSS.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Solo puede existir un body por documento. Es el segundo hijo directo de html, después de head.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>No usar atributos visuales en línea como bgcolor o text; usar CSS para eso.</li>
-  <li>Organizar el contenido con etiquetas semánticas como header, main, section y footer.</li>
-</ul>
-
-<h3>&lt;header&gt;</h3>
-
-<p><b>Definición:</b> Representa la cabecera de una página o sección. Generalmente contiene el logo del sitio, el título principal y la navegación. Ayuda a los lectores de pantalla y buscadores a identificar la parte introductoria del contenido.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;header&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">&lt;header&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Representa la cabecera de una página o sección. Contiene el logo, título principal y navegación.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;header&gt;
   &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
   &lt;nav&gt;...&lt;/nav&gt;
-&lt;/header&gt;
-</pre>
+&lt;/header&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>No confundir con la etiqueta head.</li>
+            <li>No anidar un header dentro de otro header.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>No confundir con la etiqueta head; son completamente distintas.</li>
-  <li>No anidar un header dentro de otro header.</li>
-</ul>
-
-<h3>&lt;main&gt;</h3>
-
-<p><b>Definición:</b> Delimita el contenido principal de la página. Solo debe haber uno por documento. Es muy útil para la accesibilidad porque permite a los lectores de pantalla saltar directamente al contenido importante.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;main&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">&lt;main&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Delimita el contenido principal de la página. Solo debe haber uno por documento.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;main&gt;
   &lt;h2&gt;Artículo principal&lt;/h2&gt;
-  &lt;p&gt;Contenido más importante de la página.&lt;/p&gt;
-&lt;/main&gt;
-</pre>
+  &lt;p&gt;Contenido importante.&lt;/p&gt;
+&lt;/main&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Usar solo un main por página.</li>
+            <li>No meterlo dentro de header, footer o nav.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Usar solo un main por página.</li>
-  <li>No meterlo dentro de header, footer, nav o aside.</li>
-</ul>
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">&lt;footer&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Define el pie de página. Contiene derechos de autor, enlaces legales y datos de contacto.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2025 Mi Sitio.&lt;/p&gt;
+&lt;/footer&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Mantenerlo simple y con información relevante.</li>
+            <li>Se puede usar dentro de un article para indicar autor y fecha.</li>
+          </ul>
+        </div>
+      </div>
 
-<h3>&lt;footer&gt;</h3>
+    </div>
 
-<p><b>Definición:</b> Define el pie de página de un documento o sección. Suele contener información de derechos de autor, enlaces legales, datos de contacto o créditos del autor.</p>
+    <hr>
 
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;footer&gt;
-  &lt;p&gt;&amp;copy; 2025 Mi Sitio. Todos los derechos reservados.&lt;/p&gt;
-&lt;/footer&gt;
-</pre>
+    <!-- ===================== 2. TEXTO ===================== -->
+    <div id="texto" class="mb-5">
+      <h2 class="mb-3">2. Etiquetas de Texto</h2>
+      <p>Las etiquetas de texto permiten organizar y dar significado al contenido escrito. Indican al navegador y buscadores qué partes son más importantes, cuáles son títulos y cuáles son párrafos normales.</p>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Mantenerlo simple y con información relevante.</li>
-  <li>Se puede usar también dentro de un article para indicar el autor y la fecha.</li>
-</ul>
-
-</div>
-
-<hr>
-
-<!-- TEXTO -->
-
-<div>
-<h2>2. Etiquetas de Texto</h2>
-
-<p>Las etiquetas de texto permiten organizar y dar significado al contenido escrito de una página. No solo sirven para mostrar palabras; también indican al navegador y a los buscadores qué partes del texto son más importantes, cuáles son títulos y cuáles son párrafos normales.</p>
-
-<h3>&lt;h1&gt; - &lt;h6&gt;</h3>
-
-<p><b>Definición:</b> Son las etiquetas de encabezado. Definen la jerarquía de los títulos en la página. h1 es el más importante (título principal) y h6 es el menos importante. Los buscadores como Google los usan para entender de qué trata la página.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;h1&gt;Título principal&lt;/h1&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-success text-white">&lt;h1&gt; - &lt;h6&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Etiquetas de encabezado que definen la jerarquía de títulos. h1 es el más importante y h6 el menos.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;h1&gt;Título principal&lt;/h1&gt;
 &lt;h2&gt;Subtítulo&lt;/h2&gt;
-&lt;h3&gt;Sección&lt;/h3&gt;
-</pre>
+&lt;h3&gt;Sección&lt;/h3&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Usar solo un h1 por página.</li>
+            <li>No saltar niveles: no ir de h1 directamente a h4.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Representan estructura lógica, no tamaños de letra. Si quieres cambiar el tamaño visual de un título, usa CSS, no cambies de nivel de encabezado.</p>
+      <div class="card mb-3">
+        <div class="card-header bg-success text-white">&lt;p&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Define un párrafo de texto. Es la etiqueta de texto más usada en HTML.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>No usar br varias veces para separar textos; usar p.</li>
+            <li>No meter etiquetas de bloque dentro de un p.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Usar solo un h1 por página.</li>
-  <li>No saltar niveles: no ir de h1 directamente a h4.</li>
-  <li>No usar encabezados solo para hacer el texto más grande.</li>
-</ul>
+      <div class="card mb-3">
+        <div class="card-header bg-success text-white">&lt;strong&gt; y &lt;em&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> strong marca texto importante (negrita). em marca texto con énfasis (cursiva). Ambas tienen significado semántico real.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;p&gt;Es &lt;strong&gt;obligatorio&lt;/strong&gt; guardar
+antes de &lt;em&gt;cerrar el editor&lt;/em&gt;.&lt;/p&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>No usarlas solo para cambiar el aspecto visual.</li>
+            <li>No abusar: si todo está marcado, nada es importante.</li>
+          </ul>
+        </div>
+      </div>
 
-<h3>&lt;p&gt;</h3>
+      <div class="card mb-3">
+        <div class="card-header bg-success text-white">&lt;span&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Contenedor en línea sin significado semántico. Se usa para aplicar estilos CSS a partes del texto.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;p&gt;El descuento es del
+&lt;span class="resaltado"&gt;30%&lt;/span&gt; hoy.&lt;/p&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Preferir etiquetas semánticas cuando aplique.</li>
+            <li>Siempre usar junto con una clase o id.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Definición:</b> Define un párrafo de texto. Es la etiqueta de texto más usada en HTML. El navegador agrega automáticamente espacio antes y después de cada párrafo para separarlo visualmente del resto del contenido.</p>
+    </div>
 
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;p&gt;Este es un párrafo de ejemplo con información relevante.&lt;/p&gt;
-</pre>
+    <hr>
 
-<p><b>Uso adecuado:</b> Usar para agrupar oraciones relacionadas que forman una idea completa.</p>
+    <!-- ===================== 3. LISTAS ===================== -->
+    <div id="listas" class="mb-5">
+      <h2 class="mb-3">3. Listas</h2>
+      <p>Las listas permiten organizar información en grupos de elementos relacionados. Son muy usadas en menús, instrucciones paso a paso y glosarios.</p>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>No usar la etiqueta br varias veces seguidas para separar textos; para eso sirve p.</li>
-  <li>No meter etiquetas de bloque como div o h2 dentro de un p.</li>
-</ul>
-
-<h3>&lt;strong&gt; y &lt;em&gt;</h3>
-
-<p><b>Definición:</b> strong marca texto con importancia semántica fuerte; el navegador lo muestra en negrita. em marca texto con énfasis; el navegador lo muestra en cursiva. Ambas etiquetas tienen significado real para los lectores de pantalla, que cambian el tono de voz al leerlas.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;p&gt;Es &lt;strong&gt;obligatorio&lt;/strong&gt; guardar el archivo
-antes de &lt;em&gt;cerrar el editor&lt;/em&gt;.&lt;/p&gt;
-</pre>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>No usarlas solo para cambiar el aspecto visual del texto; para eso está CSS.</li>
-  <li>No abusar de ellas: si todo está marcado como importante, nada lo es realmente.</li>
-</ul>
-
-<h3>&lt;span&gt;</h3>
-
-<p><b>Definición:</b> Es un contenedor en línea sin significado semántico propio. Se usa para aplicar estilos CSS o identificar con JavaScript una parte específica del texto dentro de un párrafo u otra etiqueta.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;p&gt;El descuento es del &lt;span class="resaltado"&gt;30%&lt;/span&gt; hoy.&lt;/p&gt;
-</pre>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Preferir etiquetas con significado (strong, em, abbr) cuando aplique.</li>
-  <li>Siempre usar span junto con una clase o id para darle propósito claro.</li>
-</ul>
-
-</div>
-
-<hr>
-
-<!-- LISTAS -->
-
-<div>
-<h2>3. Listas</h2>
-
-<p>Las listas permiten organizar información en grupos de elementos relacionados. En HTML existen tres tipos: listas desordenadas (viñetas), listas ordenadas (numeradas) y listas de definición (término con descripción). Son muy usadas en menús de navegación, pasos de instrucciones y glosarios.</p>
-
-<h3>&lt;ul&gt; - Lista desordenada</h3>
-
-<p><b>Definición:</b> Crea una lista de elementos sin orden específico. Cada elemento se muestra con una viñeta por defecto. El orden en que aparecen los ítems no es importante para el significado.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;ul&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-warning">&lt;ul&gt; - Lista desordenada</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Crea una lista de elementos sin orden específico. Cada elemento se muestra con una viñeta.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;ul&gt;
   &lt;li&gt;Manzana&lt;/li&gt;
   &lt;li&gt;Naranja&lt;/li&gt;
-  &lt;li&gt;Pera&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+&lt;/ul&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>El único hijo directo válido de ul es li.</li>
+            <li>Cambiar el estilo de las viñetas con CSS.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Listas de ingredientes, características de un producto, opciones de menú de navegación, cualquier conjunto de elementos donde el orden no cambia el significado.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>El único hijo directo válido de ul es li.</li>
-  <li>Cambiar el estilo de las viñetas con CSS (list-style-type) en lugar de hacks visuales.</li>
-</ul>
-
-<h3>&lt;ol&gt; - Lista ordenada</h3>
-
-<p><b>Definición:</b> Crea una lista de elementos numerados automáticamente. El orden de los ítems es importante y tiene significado. Por defecto usa números (1, 2, 3...) pero se puede cambiar a letras o números romanos con CSS.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;ol&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-warning">&lt;ol&gt; - Lista ordenada</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Crea una lista numerada automáticamente. El orden de los elementos es importante.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;ol&gt;
   &lt;li&gt;Abrir el navegador&lt;/li&gt;
-  &lt;li&gt;Escribir la dirección web&lt;/li&gt;
+  &lt;li&gt;Escribir la dirección&lt;/li&gt;
   &lt;li&gt;Presionar Enter&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+&lt;/ol&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Usar start para comenzar desde un número diferente al 1.</li>
+            <li>Usar reversed para orden descendente.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Instrucciones paso a paso, recetas, rankings o cualquier secuencia donde el orden cambia el resultado.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Usar el atributo start para comenzar desde un número diferente al 1.</li>
-  <li>Usar el atributo reversed para contar en orden descendente.</li>
-</ul>
-
-<h3>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; - Lista de definición</h3>
-
-<p><b>Definición:</b> dl crea una lista de términos con sus descripciones. dt define el término y dd define su descripción. Es perfecta para glosarios, diccionarios o cualquier lista de pares clave-valor.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;dl&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-warning">&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; - Lista de definición</div>
+        <div class="card-body">
+          <p><b>Definición:</b> dl agrupa pares término-descripción. dt es el término y dd es su descripción.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;dl&gt;
   &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;Lenguaje de marcado para crear páginas web.&lt;/dd&gt;
+  &lt;dd&gt;Lenguaje para crear páginas web.&lt;/dd&gt;
   &lt;dt&gt;CSS&lt;/dt&gt;
-  &lt;dd&gt;Lenguaje para dar estilo visual a las páginas.&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+  &lt;dd&gt;Lenguaje para dar estilo visual.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Un dt puede tener varios dd asociados.</li>
+            <li>No usar dl solo para crear sangría visual.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Un dt puede tener varios dd asociados si el término tiene varias acepciones.</li>
-  <li>No usar dl solo para crear sangría visual; usar CSS para eso.</li>
-</ul>
+    </div>
 
-</div>
+    <hr>
 
-<hr>
+    <!-- ===================== 4. FORMULARIOS ===================== -->
+    <div id="formularios" class="mb-5">
+      <h2 class="mb-3">4. Formularios</h2>
+      <p>Los formularios permiten recopilar información del usuario. Son fundamentales en páginas de registro, contacto y compras en línea.</p>
 
-<!-- FORMULARIOS -->
-
-<div>
-<h2>4. Formularios</h2>
-
-<p>Los formularios permiten recopilar información del usuario: nombres, correos, contraseñas, opciones, archivos, etc. Son fundamentales en páginas de registro, inicio de sesión, contacto y compras en línea. Un formulario bien construido mejora la experiencia del usuario y facilita el procesamiento de datos en el servidor.</p>
-
-<h3>&lt;form&gt;</h3>
-
-<p><b>Definición:</b> Es el contenedor principal de un formulario. Define hacia dónde se envían los datos (atributo action) y el método de envío (atributo method: get o post). Todos los campos deben ir dentro de esta etiqueta.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;form action="/enviar-datos" method="post"&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-danger text-white">&lt;form&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Contenedor principal de un formulario. Define hacia dónde se envían los datos y el método de envío.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;form action="/enviar" method="post"&gt;
   &lt;!-- campos aquí --&gt;
-&lt;/form&gt;
-</pre>
+&lt;/form&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Usar method="post" para datos privados como contraseñas.</li>
+            <li>No anidar un form dentro de otro form.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Usar method="post" para enviar datos privados como contraseñas. Usar method="get" solo para búsquedas donde los datos pueden aparecer en la URL.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Siempre asociar cada campo con un label.</li>
-  <li>No anidar un form dentro de otro form.</li>
-  <li>Usar el atributo novalidate solo cuando se implementa validación propia con JavaScript.</li>
-</ul>
-
-<h3>&lt;input&gt;</h3>
-
-<p><b>Definición:</b> Es el campo de entrada más versátil del formulario. Cambia su comportamiento según el valor del atributo type. Puede ser texto, contraseña, checkbox, radio, fecha, correo, archivo, botón de envío y muchos más tipos.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;input type="text" name="nombre" placeholder="Tu nombre" required&gt;
-&lt;input type="email" name="correo" placeholder="tucorreo@email.com"&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-danger text-white">&lt;input&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Campo de entrada más versátil. Cambia según el atributo type: texto, contraseña, email, checkbox, etc.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;input type="text" name="nombre" placeholder="Tu nombre" required&gt;
+&lt;input type="email" name="correo"&gt;
 &lt;input type="password" name="clave"&gt;
-&lt;input type="checkbox" name="terminos" value="aceptado"&gt;
-&lt;input type="submit" value="Enviar"&gt;
-</pre>
+&lt;input type="checkbox" name="terminos"&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre incluir el atributo name.</li>
+            <li>Usar required en campos obligatorios.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Siempre incluir el atributo name para que el dato llegue al servidor.</li>
-  <li>Usar el type correcto ya que activa validaciones automáticas del navegador.</li>
-  <li>Usar required en campos obligatorios.</li>
-</ul>
+      <div class="card mb-3">
+        <div class="card-header bg-danger text-white">&lt;label&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Etiqueta descriptiva de un campo. Al hacer clic en ella, el cursor se mueve al campo asociado.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>El valor de for debe ser igual al id del input.</li>
+            <li>Nunca omitir el label.</li>
+          </ul>
+        </div>
+      </div>
 
-<h3>&lt;label&gt;</h3>
-
-<p><b>Definición:</b> Es la etiqueta descriptiva de un campo. Indica al usuario qué información debe escribir. Al hacer clic en el label, el cursor se mueve automáticamente al campo asociado. Es fundamental para la accesibilidad.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
-&lt;input type="text" id="nombre" name="nombre"&gt;
-</pre>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>El valor del atributo for en el label debe ser igual al id del input.</li>
-  <li>Nunca omitir el label; si no debe verse, ocultarlo con CSS.</li>
-</ul>
-
-<h3>&lt;select&gt;, &lt;textarea&gt; y &lt;button&gt;</h3>
-
-<p><b>Definición:</b> select crea una lista desplegable de opciones. textarea permite escribir texto en múltiples líneas. button crea un botón que puede enviar el formulario, limpiarlo o ejecutar una acción con JavaScript.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;select name="ciudad"&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-danger text-white">&lt;select&gt;, &lt;textarea&gt; y &lt;button&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> select crea un menú desplegable. textarea permite texto multilínea. button crea un botón interactivo.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;select name="ciudad"&gt;
   &lt;option value=""&gt;Selecciona una ciudad&lt;/option&gt;
   &lt;option value="bogota"&gt;Bogotá&lt;/option&gt;
-  &lt;option value="medellin"&gt;Medellín&lt;/option&gt;
 &lt;/select&gt;
 
 &lt;textarea name="mensaje" rows="5"
-  placeholder="Escribe tu mensaje aquí..."&gt;&lt;/textarea&gt;
+  placeholder="Escribe aquí..."&gt;&lt;/textarea&gt;
 
-&lt;button type="submit"&gt;Enviar formulario&lt;/button&gt;
-</pre>
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre especificar type en button.</li>
+            <li>Agregar una primera opción vacía en select.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Siempre especificar type en button (submit, button o reset).</li>
-  <li>Agregar una primera opción vacía en select como instrucción al usuario.</li>
-  <li>Controlar el tamaño de textarea con CSS en lugar de rows y cols.</li>
-</ul>
+    </div>
 
-</div>
+    <hr>
 
-<hr>
+    <!-- ===================== 5. TABLAS ===================== -->
+    <div id="tablas" class="mb-5">
+      <h2 class="mb-3">5. Tablas</h2>
+      <p>Las tablas permiten mostrar información en filas y columnas. Son ideales para datos comparativos, horarios y reportes. Nunca deben usarse para maquetar páginas.</p>
 
-<!-- TABLAS -->
-
-<div>
-<h2>5. Tablas</h2>
-
-<p>Las tablas en HTML permiten mostrar información organizada en filas y columnas. Son ideales para datos comparativos, horarios, calendarios y reportes. Es importante usarlas solo para datos tabulares y nunca para maquetar el diseño de una página, ya que para eso existe CSS.</p>
-
-<h3>&lt;table&gt;</h3>
-
-<p><b>Definición:</b> Es el contenedor principal de una tabla. Dentro de él se colocan las filas, encabezados, cuerpo y pie de la tabla. Por sí sola no muestra nada; necesita las etiquetas tr, th y td para mostrar datos.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;table&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-info text-white">&lt;table&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Contenedor principal de una tabla. Necesita tr, th y td para mostrar datos.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;table&gt;
   &lt;caption&gt;Tabla de notas&lt;/caption&gt;
   &lt;thead&gt; ... &lt;/thead&gt;
   &lt;tbody&gt; ... &lt;/tbody&gt;
-  &lt;tfoot&gt; ... &lt;/tfoot&gt;
-&lt;/table&gt;
-</pre>
+&lt;/table&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre agregar caption para describir la tabla.</li>
+            <li>Nunca usar tables para maquetar páginas.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Siempre agregar caption para describir el contenido de la tabla.</li>
-  <li>Nunca usar tables para maquetar páginas; usar CSS Grid o Flexbox.</li>
-  <li>Separar la tabla en thead, tbody y tfoot para mayor claridad semántica.</li>
-</ul>
-
-<h3>&lt;tr&gt;, &lt;th&gt; y &lt;td&gt;</h3>
-
-<p><b>Definición:</b> tr define una fila dentro de la tabla. th define una celda de encabezado (se muestra en negrita y centrada por defecto, tiene significado semántico de cabecera). td define una celda de datos normal. Estas tres etiquetas trabajan siempre juntas para construir la estructura interna de la tabla.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;table&gt;
+      <div class="card mb-3">
+        <div class="card-header bg-info text-white">&lt;tr&gt;, &lt;th&gt; y &lt;td&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> tr define una fila. th define una celda de encabezado. td define una celda de datos normal.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th scope="col"&gt;Nombre&lt;/th&gt;
       &lt;th scope="col"&gt;Nota&lt;/th&gt;
-      &lt;th scope="col"&gt;Estado&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Ana García&lt;/td&gt;
       &lt;td&gt;4.5&lt;/td&gt;
-      &lt;td&gt;Aprobado&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Luis Pérez&lt;/td&gt;
-      &lt;td&gt;3.8&lt;/td&gt;
-      &lt;td&gt;Aprobado&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+&lt;/table&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Usar scope="col" o scope="row" en th para accesibilidad.</li>
+            <li>No aplicar estilos directamente en td; usar clases CSS.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Uso adecuado:</b> Usar colspan para fusionar celdas horizontalmente y rowspan para fusionar celdas verticalmente cuando los datos lo requieran.</p>
+    </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Usar scope="col" o scope="row" en th para mejorar la accesibilidad.</li>
-  <li>No aplicar estilos directamente en los atributos de td; usar clases CSS.</li>
-</ul>
+    <hr>
 
-</div>
+    <!-- ===================== 6. MULTIMEDIA ===================== -->
+    <div id="multimedia" class="mb-5">
+      <h2 class="mb-3">6. Multimedia</h2>
+      <p>Las etiquetas multimedia permiten integrar imágenes, videos y audios sin plugins externos. Desde HTML5 el navegador los reproduce de forma nativa.</p>
 
-<hr>
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;img&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Inserta una imagen. Es una etiqueta vacía; la imagen se carga desde el atributo src.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;img src="foto.jpg"
+     alt="Descripción de la imagen"
+     width="300" height="300"&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Nunca omitir el atributo alt.</li>
+            <li>Especificar width y height para evitar saltos al cargar.</li>
+            <li>Usar loading="lazy" en imágenes lejos del inicio.</li>
+          </ul>
+        </div>
+      </div>
 
-<!-- MULTIMEDIA -->
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;video&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Incrusta un reproductor de video nativo. Admite múltiples fuentes para compatibilidad entre navegadores.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;video controls width="640" height="360"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;p&gt;Tu navegador no soporta video HTML5.&lt;/p&gt;
+&lt;/video&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>No usar autoplay con sonido.</li>
+            <li>Agregar subtítulos con la etiqueta track.</li>
+          </ul>
+        </div>
+      </div>
 
-<div>
-<h2>6. Multimedia</h2>
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;audio&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Incrusta un reproductor de audio nativo en la página.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  Tu navegador no soporta audio HTML5.
+&lt;/audio&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Nunca reproducir audio automáticamente.</li>
+            <li>Incluir siempre el atributo controls.</li>
+          </ul>
+        </div>
+      </div>
 
-<p>Las etiquetas multimedia permiten integrar imágenes, videos y audios directamente en la página sin necesidad de plugins externos. Desde HTML5, el navegador puede reproducir estos contenidos de forma nativa. Es importante usarlas correctamente para garantizar accesibilidad y buen rendimiento de carga.</p>
-
-<h3>&lt;img&gt;</h3>
-
-<p><b>Definición:</b> Inserta una imagen en el documento. Es una etiqueta vacía, es decir, no tiene etiqueta de cierre. La imagen se carga desde la ruta indicada en el atributo src. El atributo alt es obligatorio y describe la imagen en texto para personas que usan lectores de pantalla o cuando la imagen no carga por algún error.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;img src="foto-perfil.jpg"
-     alt="Fotografía de perfil del autor"
-     width="300" height="300"&gt;
-</pre>
-
-<p><b>Uso adecuado:</b> Para imágenes que forman parte del contenido. Si la imagen es solo decorativa (no aporta información), usar alt="" vacío para que los lectores de pantalla la ignoren.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Nunca omitir el atributo alt; su ausencia es un error de accesibilidad.</li>
-  <li>Especificar width y height para evitar que la página salte mientras carga.</li>
-  <li>Usar loading="lazy" en imágenes que están lejos del inicio de la página.</li>
-  <li>Usar formatos modernos como WebP para reducir el peso del archivo.</li>
-</ul>
-
-<h3>&lt;video&gt;</h3>
-
-<p><b>Definición:</b> Incrusta un reproductor de video nativo directamente en la página. Admite múltiples fuentes con la etiqueta source para garantizar compatibilidad entre navegadores. El atributo controls muestra los botones de reproducción, pausa y volumen al usuario.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;video controls width="640" height="360"&gt;
-  &lt;source src="presentacion.mp4" type="video/mp4"&gt;
-  &lt;source src="presentacion.webm" type="video/webm"&gt;
-  &lt;p&gt;Tu navegador no soporta la reproducción de video HTML5.&lt;/p&gt;
-&lt;/video&gt;
-</pre>
-
-<p><b>Uso adecuado:</b> El texto entre las etiquetas de video sirve de mensaje alternativo para navegadores muy antiguos que no soporten HTML5.</p>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>No usar autoplay con sonido; los navegadores modernos lo bloquean por defecto.</li>
-  <li>Agregar subtítulos con la etiqueta track para mejorar la accesibilidad.</li>
-  <li>Usar preload="metadata" para que el navegador solo cargue la información básica del video al inicio.</li>
-</ul>
-
-<h3>&lt;audio&gt;</h3>
-
-<p><b>Definición:</b> Incrusta un reproductor de audio nativo en la página. Funciona de manera similar a video pero solo para contenido de sonido. También admite múltiples fuentes y el texto entre etiquetas sirve como alternativa para navegadores sin soporte.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;audio controls&gt;
-  &lt;source src="podcast-episodio1.mp3" type="audio/mpeg"&gt;
-  &lt;source src="podcast-episodio1.ogg" type="audio/ogg"&gt;
-  Tu navegador no soporta la reproducción de audio HTML5.
-&lt;/audio&gt;
-</pre>
-
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Nunca reproducir audio automáticamente sin que el usuario lo solicite.</li>
-  <li>Incluir siempre el atributo controls para que el usuario pueda pausar o bajar el volumen.</li>
-  <li>Ofrecer al menos dos formatos (mp3 y ogg) para mayor compatibilidad entre navegadores.</li>
-</ul>
-
-<h3>&lt;iframe&gt;</h3>
-
-<p><b>Definición:</b> Permite incrustar contenido externo dentro de la página, como un video de YouTube, un mapa de Google Maps o un documento PDF. El contenido se muestra en un marco independiente dentro de la página principal sin necesidad de redirigir al usuario a otro sitio.</p>
-
-<p><b>Sintaxis básica:</b></p>
-<pre>
-&lt;iframe
-  src="https://www.youtube.com/embed/ID_DEL_VIDEO"
-  width="560"
-  height="315"
-  title="Tutorial de HTML para principiantes"
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;iframe&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Incrusta contenido externo como videos de YouTube o mapas de Google Maps en un marco independiente.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;iframe
+  src="https://www.youtube.com/embed/ID"
+  width="560" height="315"
+  title="Descripción del video"
   allowfullscreen&gt;
-&lt;/iframe&gt;
-</pre>
+&lt;/iframe&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre incluir el atributo title.</li>
+            <li>Usar sandbox para limitar permisos del contenido externo.</li>
+          </ul>
+        </div>
+      </div>
 
-<p><b>Buenas prácticas:</b></p>
-<ul>
-  <li>Siempre incluir el atributo title con una descripción del contenido incrustado.</li>
-  <li>Usar el atributo sandbox para limitar los permisos del contenido externo.</li>
-  <li>No intentar incrustar páginas que no lo permitan; muchos sitios bloquean ser mostrados en iframe.</li>
-</ul>
+    </div>
 
-</div>
+    <hr>
 
-<hr>
+    <!-- ===================== FOOTER ===================== -->
+    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
 
-<p><b>Blog Educativo - Actividad HTML</b> | Este documento fue creado con fines educativos para aprender las etiquetas fundamentales de HTML organizadas por categorías.</p>
+  </div>
+
+  <!-- Botón flotante -->
+  <button onclick="irArriba()" 
+    style="
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    " 
+    class="btn btn-warning">
+    ↑
+  </button>
+
+  <!-- Scripts al final -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 </html>

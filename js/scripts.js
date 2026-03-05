@@ -1,15 +1,16 @@
 function irArriba() {
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function buscar() {
   let texto = document.getElementById("buscador").value.toLowerCase();
-  let secciones = document.querySelectorAll("div");
-  secciones.forEach(function(seccion) {
-    if (seccion.innerText.toLowerCase().includes(texto)) {
-      seccion.style.display = "block";
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(function(card) {
+    if (card.innerText.toLowerCase().includes(texto)) {
+      card.style.display = "block";
     } else {
-      seccion.style.display = "none";
+      card.style.display = "none";
     }
   });
 }
