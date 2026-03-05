@@ -1,85 +1,136 @@
- <!-- ===================== 6. MULTIMEDIA ===================== -->
-    <div id="multimedia" class="mb-5">
-      <h2 class="mb-3">6. Multimedia</h2>
-      <p>Las etiquetas multimedia permiten integrar imágenes, videos y audios sin plugins externos. Desde HTML5 el navegador los reproduce de forma nativa.</p>
+<!DOCTYPE html>
+<html lang="es">
 
-      <div class="card mb-3">
-        <div class="card-header bg-dark text-white">&lt;img&gt;</div>
-        <div class="card-body">
-          <p><b>Definición:</b> Inserta una imagen. Es una etiqueta vacía; la imagen se carga desde el atributo src.</p>
-          <p><b>Sintaxis básica:</b></p>
-          <pre>&lt;img src="foto.jpg"
+<head>
+  <meta charset="UTF-8">
+  <title>Multimedia - Blog HTML</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <a class="navbar-brand fw-bold" href="index.html">📘 Blog HTML</a>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <a class="nav-link" href="estructurales.html">Estructurales</a>
+    <a class="nav-link" href="texto.html">Texto</a>
+    <a class="nav-link" href="listas.html">Listas</a>
+    <a class="nav-link" href="formularios.html">Formularios</a>
+    <a class="nav-link" href="tablas.html">Tablas</a>
+    <a class="nav-link" href="multimedia.html">Multimedia</a>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
+      <button class="btn btn-outline-secondary" onclick="buscar()">Buscar</button>
+    </div>
+  </nav>
+
+  <!-- ===================== CONTENIDO ===================== -->
+  <div class="container mt-4">
+
+    <div class="card p-3 mb-4">
+      <h2 class="mb-1">Etiquetas Multimedia</h2>
+      <p class="text-muted mb-0">Las etiquetas multimedia permiten integrar imágenes, videos y audios directamente en la página sin necesidad de plugins externos. Desde HTML5 el navegador los reproduce de forma nativa.</p>
+    </div>
+
+    <!-- img -->
+    <div class="card mb-3">
+      <div class="card-header bg-dark text-white">&lt;img&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Inserta una imagen en el documento. Es una etiqueta vacía; la imagen se carga desde la ruta indicada en el atributo src. El atributo alt es obligatorio.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;img src="foto.jpg"
      alt="Descripción de la imagen"
      width="300" height="300"&gt;</pre>
-          <p><b>Buenas prácticas:</b></p>
-          <ul>
-            <li>Nunca omitir el atributo alt.</li>
-            <li>Especificar width y height para evitar saltos al cargar.</li>
-            <li>Usar loading="lazy" en imágenes lejos del inicio.</li>
-          </ul>
-        </div>
+        <p><b>Uso adecuado:</b> Para imágenes que forman parte del contenido. Si la imagen es decorativa usar alt="" vacío para que los lectores de pantalla la ignoren.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Nunca omitir el atributo alt; su ausencia es un error de accesibilidad.</li>
+          <li>Especificar width y height para evitar saltos al cargar.</li>
+          <li>Usar loading="lazy" en imágenes lejos del inicio de la página.</li>
+          <li>Usar formatos modernos como WebP para reducir el peso del archivo.</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card mb-3">
-        <div class="card-header bg-dark text-white">&lt;video&gt;</div>
-        <div class="card-body">
-          <p><b>Definición:</b> Incrusta un reproductor de video nativo. Admite múltiples fuentes para compatibilidad entre navegadores.</p>
-          <p><b>Sintaxis básica:</b></p>
-          <pre>&lt;video controls width="640" height="360"&gt;
+    <!-- video -->
+    <div class="card mb-3">
+      <div class="card-header bg-dark text-white">&lt;video&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Incrusta un reproductor de video nativo directamente en la página. Admite múltiples fuentes con la etiqueta source para garantizar compatibilidad entre navegadores.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;video controls width="640" height="360"&gt;
   &lt;source src="video.mp4" type="video/mp4"&gt;
   &lt;source src="video.webm" type="video/webm"&gt;
   &lt;p&gt;Tu navegador no soporta video HTML5.&lt;/p&gt;
 &lt;/video&gt;</pre>
-          <p><b>Buenas prácticas:</b></p>
-          <ul>
-            <li>No usar autoplay con sonido.</li>
-            <li>Agregar subtítulos con la etiqueta track.</li>
-          </ul>
-        </div>
+        <p><b>Uso adecuado:</b> El texto entre las etiquetas sirve de mensaje alternativo para navegadores muy antiguos que no soporten HTML5.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>No usar autoplay con sonido; los navegadores modernos lo bloquean.</li>
+          <li>Agregar subtítulos con la etiqueta track para accesibilidad.</li>
+          <li>Usar preload="metadata" para cargar solo la información básica al inicio.</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card mb-3">
-        <div class="card-header bg-dark text-white">&lt;audio&gt;</div>
-        <div class="card-body">
-          <p><b>Definición:</b> Incrusta un reproductor de audio nativo en la página.</p>
-          <p><b>Sintaxis básica:</b></p>
-          <pre>&lt;audio controls&gt;
+    <!-- audio -->
+    <div class="card mb-3">
+      <div class="card-header bg-dark text-white">&lt;audio&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Incrusta un reproductor de audio nativo en la página. Funciona de manera similar a video pero solo para contenido de sonido.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;audio controls&gt;
   &lt;source src="audio.mp3" type="audio/mpeg"&gt;
   &lt;source src="audio.ogg" type="audio/ogg"&gt;
   Tu navegador no soporta audio HTML5.
 &lt;/audio&gt;</pre>
-          <p><b>Buenas prácticas:</b></p>
-          <ul>
-            <li>Nunca reproducir audio automáticamente.</li>
-            <li>Incluir siempre el atributo controls.</li>
-          </ul>
-        </div>
+        <p><b>Uso adecuado:</b> Podcasts, efectos de sonido o música de fondo.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Nunca reproducir audio automáticamente sin que el usuario lo solicite.</li>
+          <li>Incluir siempre el atributo controls para que el usuario pueda pausar.</li>
+          <li>Ofrecer al menos dos formatos (mp3 y ogg) para mayor compatibilidad.</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card mb-3">
-        <div class="card-header bg-dark text-white">&lt;iframe&gt;</div>
-        <div class="card-body">
-          <p><b>Definición:</b> Incrusta contenido externo como videos de YouTube o mapas de Google Maps en un marco independiente.</p>
-          <p><b>Sintaxis básica:</b></p>
-          <pre>&lt;iframe
+    <!-- iframe -->
+    <div class="card mb-3">
+      <div class="card-header bg-dark text-white">&lt;iframe&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Permite incrustar contenido externo dentro de la página, como videos de YouTube, mapas de Google Maps o documentos PDF, en un marco independiente.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;iframe
   src="https://www.youtube.com/embed/ID"
   width="560" height="315"
   title="Descripción del video"
   allowfullscreen&gt;
 &lt;/iframe&gt;</pre>
-          <p><b>Buenas prácticas:</b></p>
-          <ul>
-            <li>Siempre incluir el atributo title.</li>
-            <li>Usar sandbox para limitar permisos del contenido externo.</li>
-          </ul>
-        </div>
+        <p><b>Uso adecuado:</b> Para embeber contenido externo sin redirigir al usuario a otro sitio.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Siempre incluir el atributo title con una descripción del contenido.</li>
+          <li>Usar sandbox para limitar los permisos del contenido externo.</li>
+          <li>No intentar incrustar páginas que no lo permitan.</li>
+        </ul>
       </div>
-
     </div>
 
     <hr>
-
-    <!-- ===================== FOOTER ===================== -->
     <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
 
   </div>
+
+  <!-- Botón flotante -->
+  <button onclick="irArriba()"
+    style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;"
+    class="btn btn-warning">↑
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formularios - Blog HTML</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <a class="navbar-brand fw-bold" href="index.html">📘 Blog HTML</a>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <a class="nav-link" href="estructurales.html">Estructurales</a>
+    <a class="nav-link" href="texto.html">Texto</a>
+    <a class="nav-link" href="listas.html">Listas</a>
+    <a class="nav-link" href="formularios.html">Formularios</a>
+    <a class="nav-link" href="tablas.html">Tablas</a>
+    <a class="nav-link" href="multimedia.html">Multimedia</a>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
+      <button class="btn btn-outline-secondary" onclick="buscar()">Buscar</button>
+    </div>
+  </nav>
+
+  <!-- ===================== CONTENIDO ===================== -->
+  <div class="container mt-4">
+
+    <div class="card p-3 mb-4">
+      <h2 class="mb-1">Etiquetas de Formularios</h2>
+      <p class="text-muted mb-0">Los formularios permiten recopilar información del usuario. Son fundamentales en páginas de registro, contacto y compras en línea. Un formulario bien construido mejora la experiencia del usuario y facilita el procesamiento de datos.</p>
+    </div>
+
+    <!-- form -->
+    <div class="card mb-3">
+      <div class="card-header bg-danger text-white">&lt;form&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Contenedor principal de un formulario. Define hacia dónde se envían los datos (atributo action) y el método de envío (atributo method: get o post).</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;form action="/enviar" method="post"&gt;
+  &lt;!-- campos aquí --&gt;
+&lt;/form&gt;</pre>
+        <p><b>Uso adecuado:</b> Usar method="post" para datos privados. Usar method="get" solo para búsquedas donde los datos pueden aparecer en la URL.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Usar method="post" para datos privados como contraseñas.</li>
+          <li>No anidar un form dentro de otro form.</li>
+          <li>Siempre asociar cada campo con un label.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- input -->
+    <div class="card mb-3">
+      <div class="card-header bg-danger text-white">&lt;input&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Campo de entrada más versátil del formulario. Cambia completamente su comportamiento según el valor del atributo type: texto, contraseña, email, checkbox, radio, fecha, archivo, etc.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;input type="text" name="nombre" placeholder="Tu nombre" required&gt;
+&lt;input type="email" name="correo"&gt;
+&lt;input type="password" name="clave"&gt;
+&lt;input type="checkbox" name="terminos"&gt;</pre>
+        <p><b>Uso adecuado:</b> Elegir el type correcto activa validaciones automáticas del navegador. Por ejemplo type="email" valida el formato de correo.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Siempre incluir el atributo name para que el dato llegue al servidor.</li>
+          <li>Usar required en campos obligatorios.</li>
+          <li>Vincular siempre con un label mediante for e id.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- label -->
+    <div class="card mb-3">
+      <div class="card-header bg-danger text-white">&lt;label&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Etiqueta descriptiva de un campo. Indica al usuario qué información debe escribir. Al hacer clic en el label, el cursor se mueve automáticamente al campo asociado.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;</pre>
+        <p><b>Uso adecuado:</b> Fundamental para accesibilidad. Los lectores de pantalla anuncian el label cuando el usuario enfoca el campo.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>El valor de for debe ser igual al id del input.</li>
+          <li>Nunca omitir el label; si no debe verse, ocultarlo con CSS.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- select, textarea, button -->
+    <div class="card mb-3">
+      <div class="card-header bg-danger text-white">&lt;select&gt;, &lt;textarea&gt; y &lt;button&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> select crea un menú desplegable de opciones. textarea permite escribir texto en múltiples líneas. button crea un botón que puede enviar el formulario, limpiarlo o ejecutar una acción con JavaScript.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;select name="ciudad"&gt;
+  &lt;option value=""&gt;Selecciona una ciudad&lt;/option&gt;
+  &lt;option value="bogota"&gt;Bogotá&lt;/option&gt;
+  &lt;option value="medellin"&gt;Medellín&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea name="mensaje" rows="5"
+  placeholder="Escribe aquí..."&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;</pre>
+        <p><b>Uso adecuado:</b> button type="submit" envía el formulario. button type="button" no lo hace (usado con JS). button type="reset" limpia los campos.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Siempre especificar type en button para evitar comportamientos inesperados.</li>
+          <li>Agregar una primera opción vacía en select como instrucción al usuario.</li>
+          <li>Controlar el tamaño de textarea con CSS en lugar de rows y cols.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
+
+  </div>
+
+  <!-- Botón flotante -->
+  <button onclick="irArriba()"
+    style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;"
+    class="btn btn-warning">↑
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
