@@ -1,0 +1,54 @@
+
+    <!-- ===================== 5. TABLAS ===================== -->
+    <div id="tablas" class="mb-5">
+      <h2 class="mb-3">5. Tablas</h2>
+      <p>Las tablas permiten mostrar información en filas y columnas. Son ideales para datos comparativos, horarios y reportes. Nunca deben usarse para maquetar páginas.</p>
+
+      <div class="card mb-3">
+        <div>&lt;table&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Contenedor principal de una tabla. Necesita tr, th y td para mostrar datos.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;table&gt;
+  &lt;caption&gt;Tabla de notas&lt;/caption&gt;
+  &lt;thead&gt; ... &lt;/thead&gt;
+  &lt;tbody&gt; ... &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre agregar caption para describir la tabla.</li>
+            <li>Nunca usar tables para maquetar páginas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div>&lt;tr&gt;, &lt;th&gt; y &lt;td&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> tr define una fila. th define una celda de encabezado. td define una celda de datos normal.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Nombre&lt;/th&gt;
+      &lt;th scope="col"&gt;Nota&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ana García&lt;/td&gt;
+      &lt;td&gt;4.5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Usar scope="col" o scope="row" en th para accesibilidad.</li>
+            <li>No aplicar estilos directamente en td; usar clases CSS.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Texto - Blog HTML</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <a class="navbar-brand fw-bold" href="index.html">📘 Blog HTML</a>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <a class="nav-link" href="estructurales.html">Estructurales</a>
+    <a class="nav-link" href="texto.html">Texto</a>
+    <a class="nav-link" href="listas.html">Listas</a>
+    <a class="nav-link" href="formularios.html">Formularios</a>
+    <a class="nav-link" href="tablas.html">Tablas</a>
+    <a class="nav-link" href="multimedia.html">Multimedia</a>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
+      <button class="btn btn-outline-secondary" onclick="buscar()">Buscar</button>
+    </div>
+  </nav>
+
+  <!-- ===================== CONTENIDO ===================== -->
+  <div class="container mt-4">
+
+    <div class="card p-3 mb-4">
+      <h2 class="mb-1">Etiquetas de Texto</h2>
+      <p class="text-muted mb-0">Las etiquetas de texto permiten organizar y dar significado al contenido escrito. Indican al navegador y buscadores qué partes son más importantes, cuáles son títulos y cuáles son párrafos normales.</p>
+    </div>
+
+    <!-- h1 - h6 -->
+    <div class="card mb-3">
+      <div class="card-header bg-success text-white">&lt;h1&gt; - &lt;h6&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Etiquetas de encabezado que definen la jerarquía de títulos. h1 es el más importante y h6 el menos.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Sección&lt;/h3&gt;</pre>
+        <p><b>Uso adecuado:</b> Representan estructura lógica, no tamaños de letra. Si quieres cambiar el tamaño visual usa CSS, no cambies de nivel de encabezado.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Usar solo un h1 por página.</li>
+          <li>No saltar niveles: no ir de h1 directamente a h4.</li>
+          <li>No usarlos solo para hacer el texto más grande.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- p -->
+    <div class="card mb-3">
+      <div class="card-header bg-success text-white">&lt;p&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Define un párrafo de texto. Es la etiqueta de texto más usada en HTML. El navegador agrega espacio antes y después automáticamente.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</pre>
+        <p><b>Uso adecuado:</b> Usar para agrupar oraciones relacionadas que forman una idea completa.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>No usar br varias veces seguidas para separar textos; para eso sirve p.</li>
+          <li>No meter etiquetas de bloque como div o h2 dentro de un p.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- strong y em -->
+    <div class="card mb-3">
+      <div class="card-header bg-success text-white">&lt;strong&gt; y &lt;em&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> strong marca texto con importancia semántica fuerte (negrita). em marca texto con énfasis (cursiva). Ambas tienen significado real para los lectores de pantalla.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;p&gt;Es &lt;strong&gt;obligatorio&lt;/strong&gt; guardar
+antes de &lt;em&gt;cerrar el editor&lt;/em&gt;.&lt;/p&gt;</pre>
+        <p><b>Uso adecuado:</b> Usar cuando el contenido realmente requiere énfasis semántico, no solo visual.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>No usarlas solo para cambiar el aspecto visual del texto; para eso está CSS.</li>
+          <li>No abusar: si todo está marcado como importante, nada lo es realmente.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- span -->
+    <div class="card mb-3">
+      <div class="card-header bg-success text-white">&lt;span&gt;</div>
+      <div class="card-body">
+        <p><b>Definición:</b> Contenedor en línea sin significado semántico propio. Se usa para aplicar estilos CSS o identificar con JavaScript una parte específica del texto.</p>
+        <p><b>Sintaxis básica:</b></p>
+        <pre>&lt;p&gt;El descuento es del
+&lt;span class="resaltado"&gt;30%&lt;/span&gt; hoy.&lt;/p&gt;</pre>
+        <p><b>Uso adecuado:</b> Ideal cuando no existe ninguna etiqueta semántica más adecuada para marcar un fragmento de texto en línea.</p>
+        <p><b>Buenas prácticas:</b></p>
+        <ul>
+          <li>Preferir etiquetas semánticas (strong, em, abbr) cuando aplique.</li>
+          <li>Siempre usar junto con una clase o id para darle propósito claro.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
+
+  </div>
+
+  <!-- Botón flotante -->
+  <button onclick="irArriba()"
+    style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;"
+    class="btn btn-warning">↑
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

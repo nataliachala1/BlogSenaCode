@@ -1,0 +1,85 @@
+ <!-- ===================== 6. MULTIMEDIA ===================== -->
+    <div id="multimedia" class="mb-5">
+      <h2 class="mb-3">6. Multimedia</h2>
+      <p>Las etiquetas multimedia permiten integrar imágenes, videos y audios sin plugins externos. Desde HTML5 el navegador los reproduce de forma nativa.</p>
+
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;img&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Inserta una imagen. Es una etiqueta vacía; la imagen se carga desde el atributo src.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;img src="foto.jpg"
+     alt="Descripción de la imagen"
+     width="300" height="300"&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Nunca omitir el atributo alt.</li>
+            <li>Especificar width y height para evitar saltos al cargar.</li>
+            <li>Usar loading="lazy" en imágenes lejos del inicio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;video&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Incrusta un reproductor de video nativo. Admite múltiples fuentes para compatibilidad entre navegadores.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;video controls width="640" height="360"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;p&gt;Tu navegador no soporta video HTML5.&lt;/p&gt;
+&lt;/video&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>No usar autoplay con sonido.</li>
+            <li>Agregar subtítulos con la etiqueta track.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;audio&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Incrusta un reproductor de audio nativo en la página.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  Tu navegador no soporta audio HTML5.
+&lt;/audio&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Nunca reproducir audio automáticamente.</li>
+            <li>Incluir siempre el atributo controls.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header bg-dark text-white">&lt;iframe&gt;</div>
+        <div class="card-body">
+          <p><b>Definición:</b> Incrusta contenido externo como videos de YouTube o mapas de Google Maps en un marco independiente.</p>
+          <p><b>Sintaxis básica:</b></p>
+          <pre>&lt;iframe
+  src="https://www.youtube.com/embed/ID"
+  width="560" height="315"
+  title="Descripción del video"
+  allowfullscreen&gt;
+&lt;/iframe&gt;</pre>
+          <p><b>Buenas prácticas:</b></p>
+          <ul>
+            <li>Siempre incluir el atributo title.</li>
+            <li>Usar sandbox para limitar permisos del contenido externo.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <!-- ===================== FOOTER ===================== -->
+    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
+
+  </div>
