@@ -2,13 +2,13 @@
 body {
   font-family: 'Poppins', Arial, sans-serif; 
   margin: 20px;
-  color: #8dc927; 
+  color: #73b108; 
 }
 
 
 h1 {
   text-align: center;
-  color: #1E3A8A; 
+  color: #2e8804; 
 }
 
 h2 {
@@ -122,12 +122,12 @@ button:hover {
 
 
 
-/* Navbar clara y minimalista */
+
 .navbar {
-  background-color: #ffffff !important;
+  background-color: #c9c6c6 !important;
   border-bottom: 2px solid #e0e0e0;
   padding: 12px 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(143, 209, 193, 0.08);
 }
 
 /* Nombre del blog */
@@ -148,7 +148,7 @@ button:hover {
 
 /* Buscador */
 .navbar .form-control {
-  border: 1px solid #cccccc;
+  border: 1px solid #09928b;
   border-radius: 20px;
   font-size: 0.85rem;
   padding: 6px 14px;
@@ -156,7 +156,7 @@ button:hover {
 
 /* Botón buscar */
 .navbar .btn-outline-light {
-  border: 1px solid #cccccc;
+  border: 1px solid #09928b;
   color: #555555 !important;
   border-radius: 20px;
   font-size: 0.85rem;
