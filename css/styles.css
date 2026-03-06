@@ -1,48 +1,72 @@
+/* =========================
+   ESTILO GENERAL
+   ========================= */
 
 body {
   font-family: 'Poppins', Arial, sans-serif; 
   margin: 20px;
-  color: #73b108; 
+  color: #1e3a8a; 
+  background-color: #e8f5e9; /* verde suave */
 }
 
+/* =========================
+   TITULOS
+   ========================= */
 
 h1 {
   text-align: center;
-  color: #2e8804; 
+  color: #166534; 
 }
 
 h2 {
-  color: #1E3A8A; 
-  border-bottom: 2px solid #ccc;
+  color: #0d6efd; 
+  border-bottom: 2px solid #93c5fd;
   padding-bottom: 5px;
   font-size: 24px;
   font-weight: 600;
 }
 
 h3 {
-  color: #1E3A8A; 
+  color: #198754; 
   font-size: 18px;
   font-weight: 600;
 }
 
+/* =========================
+   CONTENEDORES
+   ========================= */
 
 div {
   background: white;
   padding: 20px;
   margin-bottom: 25px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Tarjetas bootstrap */
+.card, .seccion, .container div{
+  background-color:#ffffff;
+  border-left:5px solid #0d6efd; /* azul */
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   CODIGO
+   ========================= */
 
 pre {
-  background: #272822; 
-  color: #f8f8f2;
-  padding: 15px;
-  border-radius: 6px;
-  overflow-x: auto;
+  background:#1e293b; 
+  color:#f1f5f9;
+  padding:15px;
+  border-radius:8px;
+  overflow-x:auto;
 }
 
+/* =========================
+   LISTAS Y TEXTO
+   ========================= */
 
 ul {
   margin-left: 20px;
@@ -52,11 +76,13 @@ li {
   margin-bottom: 5px;
 }
 
-
 p {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
+/* =========================
+   NAVEGACION
+   ========================= */
 
 nav {
   text-align: center;
@@ -65,19 +91,53 @@ nav {
 
 nav a {
   text-decoration: none;
-  background: #3597e7; 
-  color: rgb(85, 224, 42);
+  background: #2563eb; 
+  color: white;
   padding: 10px 15px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 6px;
   display: inline-block;
+  transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  background: #1E40AF; 
+  background: #16a34a; 
 }
 
+/* =========================
+   FORMULARIOS
+   ========================= */
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+button {
+  background: #2563eb; 
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #16a34a; 
+}
+
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
   text-align: center;
@@ -85,84 +145,14 @@ footer {
   background: #1E3A8A; 
   color: white;
   margin-top: 30px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
+/* =========================
+   IMAGENES
+   ========================= */
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background: #0EA5E9; 
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0284C7; 
-}
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-.navbar {
-  background-color: #c9c6c6 !important;
-  border-bottom: 2px solid #e0e0e0;
-  padding: 12px 24px;
-  box-shadow: 0 2px 8px rgba(143, 209, 193, 0.08);
-}
-
-/* Nombre del blog */
-.navbar-brand {
-  color: #2c3e50 !important;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-/* Enlaces */
-.nav-link {
-  color: #555555 !important;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 6px 12px;
-}
-
-/* Buscador */
-.navbar .form-control {
-  border: 1px solid #09928b;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-}
-
-/* Botón buscar */
-.navbar .btn-outline-light {
-  border: 1px solid #09928b;
-  color: #555555 !important;
-  border-radius: 20px;
-  font-size: 0.85rem;
-}
-
-.navbar .btn-outline-light:hover {
-  background-color: #f0f0f0;
-  color: #333333 !important;
+img{
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }

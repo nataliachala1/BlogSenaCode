@@ -1,159 +1,231 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <title>Estructurales - Blog HTML</title>
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background-color:#f5f9ff;
+    }
+
+    /* Navbar */
+    .navbar{
+      background: linear-gradient(90deg,#1E3A8A,#0EA5E9,#10B981);
+    }
+
+    .navbar-brand{
+      color:white !important;
+      font-weight:600;
+    }
+
+    .nav-link{
+      color:white !important;
+      font-weight:500;
+    }
+
+    .nav-link:hover{
+      color:#A7F3D0 !important;
+    }
+
+    /* Tarjetas */
+    .card{
+      border:none;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    h2{
+      color:#1E3A8A;
+      font-weight:600;
+    }
+
+    pre{
+      background:#eef4ff;
+      padding:10px;
+      border-radius:8px;
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <a class="navbar-brand fw-bold" href="index.html"> Blog HTML</a>
-    <a class="nav-link" href="index.html">Inicio</a>
-    <a class="nav-link" href="estructurales.html">Estructurales</a>
-    <a class="nav-link" href="texto.html">Texto</a>
-    <a class="nav-link" href="listas.html">Listas</a>
-    <a class="nav-link" href="formularios.html">Formularios</a>
-    <a class="nav-link" href="tablas.html">Tablas</a>
-    <a class="nav-link" href="multimedia.html">Multimedia</a>
-    <div class="d-flex align-items-center gap-2 ms-auto">
-      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
-      <button class="btn btn-outline-secondary" onclick="buscar()">Buscar</button>
-    </div>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar px-3 d-flex flex-wrap gap-2 align-items-center">
 
-  <!-- ===================== CONTENIDO ===================== -->
-  <div class="container mt-4">
+  <a class="navbar-brand fw-bold" href="index.html">BLOG HTML</a>
 
-    <div class="card p-3 mb-4">
-      <h2 class="mb-1">Etiquetas Estructurales</h2>
-      <p class="text-muted mb-0">Las etiquetas estructurales definen el esqueleto de una página web. Sin ellas, el navegador no sabría cómo interpretar el documento. Son las primeras que debes aprender porque forman la base de cualquier archivo HTML.</p>
-    </div>
+  <a class="nav-link" href="index.html">Inicio</a>
+  <a class="nav-link" href="estructurales.html">Estructurales</a>
+  <a class="nav-link" href="texto.html">Texto</a>
+  <a class="nav-link" href="listas.html">Listas</a>
+  <a class="nav-link" href="formularios.html">Formularios</a>
+  <a class="nav-link" href="tablas.html">Tablas</a>
+  <a class="nav-link" href="multimedia.html">Multimedia</a>
 
-    <!-- html -->
-    <div class="card mb-3">
-      <div>&lt;html&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Es la etiqueta raíz de todo documento HTML. Todo el contenido de la página debe estar dentro de ella.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;html lang="es"&gt;
+  <div class="d-flex align-items-center gap-2 ms-auto">
+    <input class="form-control" style="width:180px;" type="text" id="buscador" placeholder="Buscar...">
+    <button class="btn btn-light" onclick="buscar()">Buscar</button>
+  </div>
+
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container mt-4">
+
+  <div class="card p-4 mb-4">
+    <h2 class="mb-2">Etiquetas Estructurales</h2>
+    <p class="text-muted mb-0">
+      Las etiquetas estructurales definen el esqueleto de una página web.
+      Sin ellas, el navegador no sabría cómo interpretar el documento.
+      Son las primeras que debes aprender porque forman la base de cualquier archivo HTML.
+    </p>
+  </div>
+
+  <!-- html -->
+  <div class="card p-3 mb-3">
+    <h5>&lt;html&gt;</h5>
+    <p><b>Definición:</b> Es la etiqueta raíz de todo documento HTML. Todo el contenido de la página debe estar dentro de ella.</p>
+
+<pre>
+&lt;html lang="es"&gt;
   ...
-&lt;/html&gt;</pre>
-        <p><b>Uso adecuado:</b> Debe aparecer justo después del DOCTYPE. Solo puede haber una por documento.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Siempre escribir el atributo lang con el idioma de la página.</li>
-          <li>No omitir el DOCTYPE antes de esta etiqueta.</li>
-        </ul>
-      </div>
-    </div>
+&lt;/html&gt;
+</pre>
 
-    <!-- head -->
-    <div class="card mb-3">
-      <div>&lt;head&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Contiene la información del documento que no se muestra en pantalla: título, estilos, scripts y metadatos.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;head&gt;
+    <p><b>Buenas prácticas:</b></p>
+    <ul>
+      <li>Siempre escribir el atributo lang con el idioma.</li>
+      <li>No omitir el DOCTYPE antes de esta etiqueta.</li>
+    </ul>
+  </div>
+
+  <!-- head -->
+  <div class="card p-3 mb-3">
+    <h5>&lt;head&gt;</h5>
+
+    <p><b>Definición:</b> Contiene información del documento que no se muestra en pantalla: título, estilos y metadatos.</p>
+
+<pre>
+&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;Título&lt;/title&gt;
-&lt;/head&gt;</pre>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Incluir siempre meta charset="UTF-8".</li>
-          <li>Escribir un title descriptivo y único en cada página.</li>
-        </ul>
-      </div>
-    </div>
+&lt;/head&gt;
+</pre>
 
-    <!-- body -->
-    <div class="card mb-3">
-      <div>&lt;body&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Contiene todo el contenido visible de la página: textos, imágenes, videos, tablas, formularios, etc.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;body&gt;
+    <p><b>Buenas prácticas:</b></p>
+    <ul>
+      <li>Incluir siempre meta charset="UTF-8".</li>
+      <li>Escribir un título descriptivo.</li>
+    </ul>
+  </div>
+
+  <!-- body -->
+  <div class="card p-3 mb-3">
+    <h5>&lt;body&gt;</h5>
+
+    <p><b>Definición:</b> Contiene todo el contenido visible de la página.</p>
+
+<pre>
+&lt;body&gt;
   &lt;h1&gt;Bienvenido&lt;/h1&gt;
-  &lt;p&gt;Contenido de la página.&lt;/p&gt;
-&lt;/body&gt;</pre>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Solo puede existir un body por documento.</li>
-          <li>No usar atributos visuales en línea; usar CSS.</li>
-        </ul>
-      </div>
-    </div>
+  &lt;p&gt;Contenido de la página&lt;/p&gt;
+&lt;/body&gt;
+</pre>
 
-    <!-- header -->
-    <div class="card mb-3">
-      <div>&lt;header&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Representa la cabecera de una página o sección. Contiene el logo, título principal y navegación.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;header&gt;
+    <ul>
+      <li>Solo puede existir un body por documento.</li>
+      <li>No usar estilos en línea.</li>
+    </ul>
+  </div>
+
+  <!-- header -->
+  <div class="card p-3 mb-3">
+    <h5>&lt;header&gt;</h5>
+
+    <p><b>Definición:</b> Representa la cabecera de la página o de una sección.</p>
+
+<pre>
+&lt;header&gt;
   &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
   &lt;nav&gt;...&lt;/nav&gt;
-&lt;/header&gt;</pre>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>No confundir con la etiqueta head.</li>
-          <li>No anidar un header dentro de otro header.</li>
-        </ul>
-      </div>
-    </div>
+&lt;/header&gt;
+</pre>
 
-    <!-- main -->
-    <div class="card mb-3">
-      <div>&lt;main&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Delimita el contenido principal de la página. Solo debe haber uno por documento.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;main&gt;
+    <ul>
+      <li>No confundir con head.</li>
+    </ul>
+  </div>
+
+  <!-- main -->
+  <div class="card p-3 mb-3">
+    <h5>&lt;main&gt;</h5>
+
+    <p><b>Definición:</b> Contiene el contenido principal de la página.</p>
+
+<pre>
+&lt;main&gt;
   &lt;h2&gt;Artículo principal&lt;/h2&gt;
-  &lt;p&gt;Contenido importante.&lt;/p&gt;
-&lt;/main&gt;</pre>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Usar solo un main por página.</li>
-          <li>No meterlo dentro de header, footer o nav.</li>
-        </ul>
-      </div>
-    </div>
+  &lt;p&gt;Contenido importante&lt;/p&gt;
+&lt;/main&gt;
+</pre>
 
-    <!-- footer -->
-    <div class="card mb-3">
-      <div>&lt;footer&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Define el pie de página. Contiene derechos de autor, enlaces legales y datos de contacto.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;footer&gt;
-  &lt;p&gt;&amp;copy; 2025 Mi Sitio.&lt;/p&gt;
-&lt;/footer&gt;</pre>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Mantenerlo simple y con información relevante.</li>
-          <li>Se puede usar dentro de un article para indicar autor y fecha.</li>
-        </ul>
-      </div>
-    </div>
+    <ul>
+      <li>Solo debe existir uno por página.</li>
+    </ul>
+  </div>
 
-    <hr>
-    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
+  <!-- footer -->
+  <div class="card p-3 mb-3">
+    <h5>&lt;footer&gt;</h5>
+
+    <p><b>Definición:</b> Define el pie de página.</p>
+
+<pre>
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2025 Mi Sitio&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
 
   </div>
 
-  <!-- Botón flotante -->
-  <button onclick="irArriba()"
-    style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;"
-    class="btn btn-warning">↑
-  </button>
+  <hr>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <p class="text-center text-muted">
+    Blog Educativo - Actividad HTML | Creado por Karen Daniela Holguin Cruz y Natalia Chala
+  </p>
+
+</div>
+
+<!-- BOTÓN -->
+<button onclick="irArriba()"
+style="position: fixed; bottom: 30px; right: 30px; z-index:999; border-radius:50%; width:50px; height:50px; font-size:20px;"
+class="btn btn-success">
+↑
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
+```

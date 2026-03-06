@@ -1,115 +1,206 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Listas - Blog HTML</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Listas - Blog HTML</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Tipografía -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+
+body{
+font-family:'Poppins', sans-serif;
+background:#f5f9ff;
+}
+
+/* NAVBAR */
+.navbar{
+background: linear-gradient(90deg,#1E3A8A,#0EA5E9,#10B981);
+}
+
+.navbar-brand{
+color:white !important;
+font-weight:600;
+}
+
+.nav-link{
+color:white !important;
+font-weight:500;
+}
+
+.nav-link:hover{
+color:#A7F3D0 !important;
+}
+
+/* CARDS */
+
+.card{
+border:none;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+h2{
+color:#1E3A8A;
+font-weight:600;
+}
+
+pre{
+background:#eef4ff;
+padding:10px;
+border-radius:8px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
-    <a class="nav-link" href="index.html">Inicio</a>
-    <a class="nav-link" href="estructurales.html">Estructurales</a>
-    <a class="nav-link" href="texto.html">Texto</a>
-    <a class="nav-link" href="listas.html">Listas</a>
-    <a class="nav-link" href="formularios.html">Formularios</a>
-    <a class="nav-link" href="tablas.html">Tablas</a>
-    <a class="nav-link" href="multimedia.html">Multimedia</a>
-    <div class="d-flex align-items-center gap-2 ms-auto">
-      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
-      <button class="btn btn-outline-secondary" onclick="buscar()">Buscar</button>
-    </div>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar px-3 d-flex flex-wrap gap-2 align-items-center">
 
-  <!-- ===================== CONTENIDO ===================== -->
-  <div class="container mt-4">
+<a class="navbar-brand fw-bold" href="index.html">BLOG HTML</a>
 
-    <div class="card p-3 mb-4">
-      <h2 class="mb-1">Etiquetas de Listas</h2>
-      <p class="text-muted mb-0">Las listas permiten organizar información en grupos de elementos relacionados. Son muy usadas en menús de navegación, instrucciones paso a paso y glosarios.</p>
-    </div>
+<a class="nav-link" href="index.html">Inicio</a>
+<a class="nav-link" href="estructurales.html">Estructurales</a>
+<a class="nav-link" href="texto.html">Texto</a>
+<a class="nav-link" href="listas.html">Listas</a>
+<a class="nav-link" href="formularios.html">Formularios</a>
+<a class="nav-link" href="tablas.html">Tablas</a>
+<a class="nav-link" href="multimedia.html">Multimedia</a>
 
-    <!-- ul -->
-    <div class="card mb-3">
-      <div>&lt;ul&gt; - Lista desordenada</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Crea una lista de elementos sin orden específico. Cada elemento se muestra con una viñeta por defecto. El orden en que aparecen los ítems no es importante para el significado.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;ul&gt;
+<div class="d-flex align-items-center gap-2 ms-auto">
+<input class="form-control" style="width:180px;" type="text" id="buscador" placeholder="Buscar...">
+<button class="btn btn-light" onclick="buscar()">Buscar</button>
+</div>
+
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container mt-4">
+
+<div class="card p-4 mb-4">
+
+<h2 class="mb-2">Etiquetas de Listas</h2>
+
+<p class="text-muted mb-0">
+Las listas permiten organizar información en grupos de elementos relacionados.
+Son muy usadas en menús de navegación, instrucciones paso a paso y glosarios.
+</p>
+
+</div>
+
+<!-- UL -->
+<div class="card p-3 mb-3">
+
+<h5>&lt;ul&gt; - Lista desordenada</h5>
+
+<p><b>Definición:</b> Lista de elementos sin orden específico.</p>
+
+<pre>
+&lt;ul&gt;
   &lt;li&gt;Manzana&lt;/li&gt;
   &lt;li&gt;Naranja&lt;/li&gt;
   &lt;li&gt;Pera&lt;/li&gt;
-&lt;/ul&gt;</pre>
-        <p><b>Uso adecuado:</b> Listas de ingredientes, características de un producto, opciones de menú de navegación o cualquier conjunto de elementos donde el orden no cambia el significado.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>El único hijo directo válido de ul es li.</li>
-          <li>Cambiar el estilo de las viñetas con CSS (list-style-type).</li>
-          <li>No usar listas para elementos que no sean conceptualmente una lista.</li>
-        </ul>
-      </div>
-    </div>
+&lt;/ul&gt;
+</pre>
 
-    <!-- ol -->
-    <div class="card mb-3">
-      <div>&lt;ol&gt; - Lista ordenada</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Crea una lista de elementos numerados automáticamente. El orden de los ítems es importante y tiene significado. Por defecto usa números pero se puede cambiar con CSS.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;ol&gt;
+<p><b>Uso adecuado:</b> ingredientes, características de productos o menús.</p>
+
+<ul>
+<li>El único hijo válido de ul es li.</li>
+<li>Cambiar el estilo de viñetas con CSS.</li>
+<li>No usar listas solo para diseño visual.</li>
+</ul>
+
+</div>
+
+<!-- OL -->
+<div class="card p-3 mb-3">
+
+<h5>&lt;ol&gt; - Lista ordenada</h5>
+
+<p><b>Definición:</b> Lista numerada automáticamente.</p>
+
+<pre>
+&lt;ol&gt;
   &lt;li&gt;Abrir el navegador&lt;/li&gt;
   &lt;li&gt;Escribir la dirección web&lt;/li&gt;
   &lt;li&gt;Presionar Enter&lt;/li&gt;
-&lt;/ol&gt;</pre>
-        <p><b>Uso adecuado:</b> Instrucciones paso a paso, recetas, rankings o cualquier secuencia donde el orden cambia el resultado.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Usar el atributo start para comenzar desde un número diferente al 1.</li>
-          <li>Usar el atributo reversed para contar en orden descendente.</li>
-          <li>Controlar la numeración con CSS en lugar del atributo type.</li>
-        </ul>
-      </div>
-    </div>
+&lt;/ol&gt;
+</pre>
 
-    <!-- dl, dt, dd -->
-    <div class="card mb-3">
-      <div>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; - Lista de definición</div>
-      <div class="card-body">
-        <p><b>Definición:</b> dl agrupa pares término-descripción. dt define el término y dd define su descripción. Es perfecta para glosarios, diccionarios o cualquier lista de pares clave-valor.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;dl&gt;
+<p><b>Uso adecuado:</b> instrucciones paso a paso.</p>
+
+<ul>
+<li>Se puede iniciar desde otro número con start.</li>
+<li>Puede usarse reversed para orden descendente.</li>
+<li>Controlar estilo con CSS.</li>
+</ul>
+
+</div>
+
+<!-- DL -->
+<div class="card p-3 mb-3">
+
+<h5>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; - Lista de definición</h5>
+
+<p><b>Definición:</b> Lista de términos y sus descripciones.</p>
+
+<pre>
+&lt;dl&gt;
   &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;Lenguaje de marcado para crear páginas web.&lt;/dd&gt;
+  &lt;dd&gt;Lenguaje de marcado para crear páginas web&lt;/dd&gt;
+
   &lt;dt&gt;CSS&lt;/dt&gt;
-  &lt;dd&gt;Lenguaje para dar estilo visual a las páginas.&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-        <p><b>Uso adecuado:</b> Glosarios, metadatos de artículos, preguntas frecuentes y listas de términos con descripción.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Un dt puede tener varios dd asociados si el término tiene varias acepciones.</li>
-          <li>No usar dl solo para crear sangría visual; usar CSS para eso.</li>
-        </ul>
-      </div>
-    </div>
+  &lt;dd&gt;Lenguaje que da estilo a las páginas&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
 
-    <hr>
-    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
+<p><b>Uso adecuado:</b> glosarios, diccionarios o preguntas frecuentes.</p>
 
-  </div>
+<ul>
+<li>Un término puede tener varias descripciones.</li>
+<li>No usar dl solo para crear sangría.</li>
+</ul>
 
-  <!-- Botón flotante -->
-  <button onclick="irArriba()"
-    style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;"
-    class="btn btn-warning">↑
-  </button>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+<hr>
+
+<p class="text-center text-muted">
+Blog Educativo - Actividad HTML | Creado por Karen Daniela Holguin Cruz y Natalia Chala
+</p>
+
+</div>
+
+<!-- BOTÓN FLOTANTE -->
+
+<button onclick="irArriba()"
+style="position:fixed; bottom:30px; right:30px; z-index:999; border-radius:50%; width:50px; height:50px; font-size:20px;"
+class="btn btn-success">
+
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
+```
+

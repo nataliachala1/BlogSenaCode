@@ -2,130 +2,266 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Tablas - Blog HTML</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<meta charset="UTF-8">
+
+<title>Tablas - Blog HTML</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar navbar-light bg-white px-3 d-flex flex-wrap gap-2 align-items-center" style="border-bottom: 2px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
-    <a class="nav-link" href="index.html">Inicio</a>
-    <a class="nav-link" href="estructurales.html">Estructurales</a>
-    <a class="nav-link" href="texto.html">Texto</a>
-    <a class="nav-link" href="listas.html">Listas</a>
-    <a class="nav-link" href="formularios.html">Formularios</a>
-    <a class="nav-link" href="tablas.html">Tablas</a>
-    <a class="nav-link" href="multimedia.html">Multimedia</a>
-    <div class="d-flex align-items-center gap-2 ms-auto">
-      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
-      <button class="btn btn-outline-secondary" onclick="buscar()">Buscar</button>
-    </div>
-  </nav>
+<!-- NAVBAR -->
 
-  <!-- ===================== CONTENIDO ===================== -->
-  <div class="container mt-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
 
-    <div class="card p-3 mb-4">
-      <h2 class="mb-1">Etiquetas de Tablas</h2>
-      <p class="text-muted mb-0">Las tablas permiten mostrar información organizada en filas y columnas. Son ideales para datos comparativos, horarios y reportes. Nunca deben usarse para maquetar el diseño de una página.</p>
-    </div>
+<div class="container">
 
-    <!-- table -->
-    <div class="card mb-3">
-      <div >&lt;table&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Es el contenedor principal de una tabla. Por sí sola no muestra nada; necesita las etiquetas tr, th y td para mostrar datos.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;table&gt;
-  &lt;caption&gt;Tabla de notas&lt;/caption&gt;
-  &lt;thead&gt; ... &lt;/thead&gt;
-  &lt;tbody&gt; ... &lt;/tbody&gt;
-  &lt;tfoot&gt; ... &lt;/tfoot&gt;
-&lt;/table&gt;</pre>
-        <p><b>Uso adecuado:</b> Para mostrar datos comparativos, calendarios, horarios o cualquier información con relación entre filas y columnas.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Siempre agregar caption para describir el contenido de la tabla.</li>
-          <li>Nunca usar tables para maquetar páginas; usar CSS Grid o Flexbox.</li>
-          <li>Separar la tabla en thead, tbody y tfoot para mayor claridad semántica.</li>
-        </ul>
-      </div>
-    </div>
+<a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
 
-    <!-- tr, th, td -->
-    <div class="card mb-3">
-      <div>&lt;tr&gt;, &lt;th&gt; y &lt;td&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> tr define una fila dentro de la tabla. th define una celda de encabezado (negrita y centrada por defecto). td define una celda de datos normal. Las tres trabajan siempre juntas para construir la estructura interna de la tabla.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;Nombre&lt;/th&gt;
-      &lt;th scope="col"&gt;Nota&lt;/th&gt;
-      &lt;th scope="col"&gt;Estado&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Ana García&lt;/td&gt;
-      &lt;td&gt;4.5&lt;/td&gt;
-      &lt;td&gt;Aprobado&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Luis Pérez&lt;/td&gt;
-      &lt;td&gt;3.8&lt;/td&gt;
-      &lt;td&gt;Aprobado&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-        <p><b>Uso adecuado:</b> Usar colspan para fusionar celdas horizontalmente y rowspan para fusionar celdas verticalmente cuando los datos lo requieran.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Usar scope="col" o scope="row" en th para mejorar la accesibilidad.</li>
-          <li>No aplicar estilos directamente en los atributos de td; usar clases CSS.</li>
-          <li>Incluir thead, tbody y opcionalmente tfoot para estructura semántica.</li>
-        </ul>
-      </div>
-    </div>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-    <!-- caption -->
-    <div class="card mb-3">
-      <div>&lt;caption&gt;</div>
-      <div class="card-body">
-        <p><b>Definición:</b> Define el título o descripción de una tabla. Va justo después de la etiqueta de apertura table y se muestra centrado encima de la tabla por defecto.</p>
-        <p><b>Sintaxis básica:</b></p>
-        <pre>&lt;table&gt;
-  &lt;caption&gt;Listado de estudiantes y notas&lt;/caption&gt;
-  ...
-&lt;/table&gt;</pre>
-        <p><b>Uso adecuado:</b> Fundamental para accesibilidad. Los lectores de pantalla lo anuncian antes de leer la tabla para que el usuario sepa qué información va a escuchar.</p>
-        <p><b>Buenas prácticas:</b></p>
-        <ul>
-          <li>Siempre incluirlo en tablas de datos.</li>
-          <li>Escribir una descripción breve pero informativa.</li>
-          <li>No usarlo como reemplazo de un h2 o h3 fuera de la tabla.</li>
-        </ul>
-      </div>
-    </div>
+<div class="collapse navbar-collapse" id="menu">
 
-    <hr>
-    <p class="text-center text-muted"><b>Blog Educativo - Actividad HTML</b> | Creado por Karen Daniela Holguin Cruz y Natalia Chala</p>
+<ul class="navbar-nav me-auto">
 
-  </div>
+<li class="nav-item">
+<a class="nav-link" href="index.html">Inicio</a>
+</li>
 
-  <!-- Botón flotante -->
-  <button onclick="irArriba()"
-    style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;"
-    class="btn btn-warning">↑
-  </button>
+<li class="nav-item">
+<a class="nav-link" href="estructurales.html">Estructurales</a>
+</li>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/scripts.js"></script>
+<li class="nav-item">
+<a class="nav-link" href="texto.html">Texto</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="listas.html">Listas</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="formularios.html">Formularios</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="tablas.html">Tablas</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="multimedia.html">Multimedia</a>
+</li>
+
+</ul>
+
+<input class="form-control me-2" style="width:200px;" type="text" id="buscador" placeholder="Buscar...">
+
+<button class="btn btn-success" onclick="buscar()">Buscar</button>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- CONTENIDO -->
+
+<div class="container mt-4">
+
+<div class="card p-4 mb-4 shadow-sm">
+
+<h2>Etiquetas de Tablas</h2>
+
+<p class="text-muted">
+
+Las tablas permiten mostrar información organizada en filas y columnas.
+Son ideales para datos comparativos, horarios o reportes.
+
+</p>
+
+</div>
+
+
+<!-- TABLE -->
+
+<div class="card shadow-sm mb-4">
+
+<div class="card-header bg-success text-white">
+&lt;table&gt;
+</div>
+
+<div class="card-body">
+
+<p><b>Definición:</b> Es el contenedor principal de una tabla.</p>
+
+<pre>
+&lt;table&gt;
+&lt;caption&gt;Tabla de notas&lt;/caption&gt;
+
+&lt;thead&gt;
+...
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+...
+&lt;/tbody&gt;
+
+&lt;tfoot&gt;
+...
+&lt;/tfoot&gt;
+
+&lt;/table&gt;
+</pre>
+
+<p><b>Buenas prácticas:</b></p>
+
+<ul>
+
+<li>Agregar siempre caption para describir la tabla.</li>
+
+<li>No usar tablas para diseño de páginas.</li>
+
+<li>Separar la tabla en thead, tbody y tfoot.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- TR TH TD -->
+
+<div class="card shadow-sm mb-4">
+
+<div class="card-header bg-primary text-white">
+&lt;tr&gt;, &lt;th&gt; y &lt;td&gt;
+</div>
+
+<div class="card-body">
+
+<p><b>Definición:</b></p>
+
+<ul>
+
+<li><b>tr</b> → define una fila</li>
+
+<li><b>th</b> → encabezado de columna</li>
+
+<li><b>td</b> → celda de datos</li>
+
+</ul>
+
+<pre>
+&lt;table&gt;
+
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Nombre&lt;/th&gt;
+&lt;th&gt;Nota&lt;/th&gt;
+&lt;th&gt;Estado&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ana&lt;/td&gt;
+&lt;td&gt;4.5&lt;/td&gt;
+&lt;td&gt;Aprobado&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Luis&lt;/td&gt;
+&lt;td&gt;3.8&lt;/td&gt;
+&lt;td&gt;Aprobado&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/tbody&gt;
+
+&lt;/table&gt;
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- CAPTION -->
+
+<div class="card shadow-sm mb-4">
+
+<div class="card-header bg-success text-white">
+&lt;caption&gt;
+</div>
+
+<div class="card-body">
+
+<p><b>Definición:</b> Es el título de una tabla.</p>
+
+<pre>
+&lt;table&gt;
+
+&lt;caption&gt;
+Listado de estudiantes y notas
+&lt;/caption&gt;
+
+...
+
+&lt;/table&gt;
+</pre>
+
+<p><b>Buenas prácticas:</b></p>
+
+<ul>
+
+<li>Siempre incluir caption.</li>
+
+<li>Debe ser breve y claro.</li>
+
+<li>Ayuda a la accesibilidad.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center text-muted">
+
+Blog Educativo - Actividad HTML  
+<br>
+Karen Daniela Holguin Cruz y Natalia Chala
+
+</p>
+
+</div>
+
+
+<button onclick="irArriba()" class="btn btn-success"
+
+style="position:fixed; bottom:30px; right:30px; border-radius:50%; width:50px; height:50px;">
+
+↑
+
+</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
