@@ -2,176 +2,164 @@
 <html lang="es">
 
 <head>
+  <meta charset="UTF-8">
+  <title>Multimedia - Blog HTML</title>
 
-<meta charset="UTF-8">
-<title>Multimedia - Blog HTML</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css">
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f9ff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #1E3A8A, #0EA5E9, #10B981);
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #A7F3D0 !important;
+    }
+
+    /* Tarjetas */
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #1E3A8A;
+      font-weight: 600;
+    }
+        #buscador {
+      width: 180px;
+      transition: width 0.2s;
+    }
+
+    @media (max-width: 992px) {
+      #buscador { width: 120px; }
+    }
+
+    @media (max-width: 768px) {
+      #buscador { width: 90px; }
+    }
+
+    @media (max-width: 576px) {
+      .search-wrap { display: none !important; }
+    }
+    
+
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <nav class="navbar px-3 d-flex flex-wrap gap-2 align-items-center">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <a class="navbar-brand fw-bold" href="index.html">BLOG HTML</a>
 
-<div class="container">
+    <a class="nav-link" href="index.html">Inicio</a>
+    <a class="nav-link" href="estructurales.html">Estructurales</a>
+    <a class="nav-link" href="texto.html">Texto</a>
+    <a class="nav-link" href="listas.html">Listas</a>
+    <a class="nav-link" href="formularios.html">Formularios</a>
+    <a class="nav-link" href="tablas.html">Tablas</a>
+    <a class="nav-link active" href="multimedia.html">Multimedia</a>
 
-<a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
+      <button class="btn btn-light" onclick="buscar()">Buscar</button>
+    </div>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+  </nav>
 
-<div class="collapse navbar-collapse" id="menu">
+  <!-- CONTENIDO -->
+  <div class="container mt-4">
 
-<ul class="navbar-nav me-auto">
+    <div class="card p-4 mb-4">
+      <h2 class="mb-2">Etiquetas Multimedia</h2>
+      <p class="text-muted mb-0">
+        Las etiquetas multimedia permiten insertar imágenes, video y audio directamente en la página web.
+      </p>
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="index.html">Inicio</a>
-</li>
+    <!-- img -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;img&gt;</h5>
+      <p><b>Definición:</b> Permite insertar imágenes.</p>
+      <pre>
+&lt;img src="foto.jpg" alt="Descripción" width="300"&gt;</pre>
+      <img src="img/image2.jpg" class="img-fluid rounded shadow">
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="estructurales.html">Estructurales</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="texto.html">Texto</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="listas.html">Listas</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="formularios.html">Formularios</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="tablas.html">Tablas</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link active" href="multimedia.html">Multimedia</a>
-</li>
-
-</ul>
-
-<input class="form-control me-2" style="width:200px;" type="text" placeholder="Buscar..." id="buscador">
-<button class="btn btn-success" onclick="buscar()">Buscar</button>
-
-</div>
-</div>
-</nav>
-
-
-<div class="container mt-4">
-
-<div class="card p-4 mb-4 shadow-sm">
-
-<h2>Etiquetas Multimedia</h2>
-
-<p class="text-muted">
-Las etiquetas multimedia permiten insertar imágenes, video y audio directamente en la página web.
-</p>
-
-</div>
-
-
-<!-- IMAGEN -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-success text-white">
-&lt;img&gt;
-</div>
-
-<div class="card-body">
-
-<p><b>Definición:</b> Permite insertar imágenes.</p>
-
-<pre>
-&lt;img src="foto.jpg" alt="Descripción" width="300"&gt;
-</pre>
-
-<img src="img/images.jpg" class="img-fluid rounded shadow">
-
-</div>
-</div>
-
-
-<!-- VIDEO -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-primary text-white">
-&lt;video&gt;
-</div>
-
-<div class="card-body">
-
-<pre>
+    <!-- video -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;video&gt;</h5>
+      <pre>
 &lt;video controls width="400"&gt;
-&lt;source src="video.mp4"&gt;
-&lt;/video&gt;
-</pre>
+  &lt;source src="video.mp4"&gt;
+&lt;/video&gt;</pre>
+      <video controls width="400" class="rounded shadow">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+    </div>
 
-<video controls width="400" class="rounded shadow">
-<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-</video>
-
-</div>
-</div>
-
-
-<!-- AUDIO -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-success text-white">
-&lt;audio&gt;
-</div>
-
-<div class="card-body">
-
-<pre>
+    <!-- audio -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;audio&gt;</h5>
+      <pre>
 &lt;audio controls&gt;
-&lt;source src="audio.mp3"&gt;
-&lt;/audio&gt;
-</pre>
+  &lt;source src="audio.mp3"&gt;
+&lt;/audio&gt;</pre>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      </audio>
+    </div>
 
-<audio controls>
-<source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-</audio>
+    <hr>
 
-</div>
-</div>
+    <p class="text-center text-muted">
+      Blog Educativo - Actividad HTML
+      <br>
+      Karen Daniela Holguin Cruz y Natalia Chala
+    </p>
 
+  </div>
 
-<hr>
+  <!-- BOTÓN FLOTANTE -->
+  <button onclick="irArriba()" class="btn btn-success"
+    style="position: fixed; bottom: 30px; right: 30px; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;">
+    ↑
+  </button>
 
-<p class="text-center text-muted">
-Blog Educativo - Actividad HTML  
-<br>
-Karen Daniela Holguin Cruz y Natalia Chala
-</p>
-
-</div>
-
-
-<button onclick="irArriba()" class="btn btn-success"
-style="position:fixed; bottom:30px; right:30px; border-radius:50%; width:50px; height:50px;">
-
-</button>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

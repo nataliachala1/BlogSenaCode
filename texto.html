@@ -2,243 +2,183 @@
 <html lang="es">
 
 <head>
+  <meta charset="UTF-8">
+  <title>Texto - Blog HTML</title>
 
-<meta charset="UTF-8">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<title>Texto - Blog HTML</title>
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css">
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f9ff;
+    }
 
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #1E3A8A, #0EA5E9, #10B981);
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #A7F3D0 !important;
+    }
+
+    /* Tarjetas */
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #1E3A8A;
+      font-weight: 600;
+    }
+    #buscador {
+      width: 180px;
+      transition: width 0.2s;
+    }
+
+    @media (max-width: 992px) {
+      #buscador { width: 120px; }
+    }
+
+    @media (max-width: 768px) {
+      #buscador { width: 90px; }
+    }
+
+    @media (max-width: 576px) {
+      .search-wrap { display: none !important; }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <nav class="navbar px-3 d-flex flex-wrap gap-2 align-items-center">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <a class="navbar-brand fw-bold" href="index.html">BLOG HTML</a>
 
-<div class="container">
+    <a class="nav-link" href="index.html">Inicio</a>
+    <a class="nav-link" href="estructurales.html">Estructurales</a>
+    <a class="nav-link active" href="texto.html">Texto</a>
+    <a class="nav-link" href="listas.html">Listas</a>
+    <a class="nav-link" href="formularios.html">Formularios</a>
+    <a class="nav-link" href="tablas.html">Tablas</a>
+    <a class="nav-link" href="multimedia.html">Multimedia</a>
 
-<a class="navbar-brand fw-bold" href="index.html">Blog HTML</a>
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <input class="form-control" style="width: 180px;" type="text" id="buscador" placeholder="Buscar...">
+      <button class="btn btn-light" onclick="buscar()">Buscar</button>
+    </div>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+  </nav>
 
-<div class="collapse navbar-collapse" id="menu">
+  <!-- CONTENIDO -->
+  <div class="container mt-4">
 
-<ul class="navbar-nav me-auto">
+    <div class="card p-4 mb-4">
+      <h2 class="mb-2">Etiquetas de Texto</h2>
+      <p class="text-muted mb-0">
+        Las etiquetas de texto permiten organizar y dar significado al contenido escrito.
+        Indican al navegador qué partes son títulos, párrafos o elementos importantes.
+      </p>
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="index.html">Inicio</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="estructurales.html">Estructurales</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link active" href="texto.html">Texto</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="listas.html">Listas</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="formularios.html">Formularios</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="tablas.html">Tablas</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="multimedia.html">Multimedia</a>
-</li>
-
-</ul>
-
-<input class="form-control me-2" style="width:200px;" type="text" id="buscador" placeholder="Buscar...">
-
-<button class="btn btn-success" onclick="buscar()">Buscar</button>
-
-</div>
-
-</div>
-
-</nav>
-
-
-<!-- CONTENIDO -->
-
-<div class="container mt-4">
-
-<div class="card p-4 mb-4 shadow-sm">
-
-<h2>Etiquetas de Texto</h2>
-
-<p class="text-muted">
-
-Las etiquetas de texto permiten organizar y dar significado al contenido escrito.
-Indican al navegador qué partes son títulos, párrafos o elementos importantes.
-
-</p>
-
-</div>
-
-
-<!-- H1 H6 -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-success text-white">
-&lt;h1&gt; - &lt;h6&gt;
-</div>
-
-<div class="card-body">
-
-<p><b>Definición:</b> Etiquetas de encabezado que definen la jerarquía de títulos.</p>
-
-<pre>
+    <!-- h1 - h6 -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;h1&gt; - &lt;h6&gt;</h5>
+      <p><b>Definición:</b> Etiquetas de encabezado que definen la jerarquía de títulos.</p>
+      <pre>
 &lt;h1&gt;Título principal&lt;/h1&gt;
 &lt;h2&gt;Subtítulo&lt;/h2&gt;
-&lt;h3&gt;Sección&lt;/h3&gt;
-</pre>
+&lt;h3&gt;Sección&lt;/h3&gt;</pre>
+      <p><b>Buenas prácticas:</b></p>
+      <ul>
+        <li>Usar solo un h1 por página.</li>
+        <li>No saltar niveles de encabezado.</li>
+        <li>No usarlos solo para cambiar el tamaño del texto.</li>
+      </ul>
+    </div>
 
-<p><b>Buenas prácticas:</b></p>
+    <!-- p -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;p&gt;</h5>
+      <p><b>Definición:</b> Define un párrafo de texto.</p>
+      <pre>
+&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</pre>
+      <p><b>Buenas prácticas:</b></p>
+      <ul>
+        <li>No usar varias etiquetas br para separar texto.</li>
+        <li>No insertar div o h2 dentro de p.</li>
+      </ul>
+    </div>
 
-<ul>
-
-<li>Usar solo un h1 por página.</li>
-
-<li>No saltar niveles de encabezado.</li>
-
-<li>No usarlos solo para cambiar el tamaño del texto.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- P -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-primary text-white">
-&lt;p&gt;
-</div>
-
-<div class="card-body">
-
-<p><b>Definición:</b> Define un párrafo de texto.</p>
-
-<pre>
-&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
-</pre>
-
-<p><b>Buenas prácticas:</b></p>
-
-<ul>
-
-<li>No usar varias etiquetas br para separar texto.</li>
-
-<li>No insertar div o h2 dentro de p.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- STRONG EM -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-success text-white">
-&lt;strong&gt; y &lt;em&gt;
-</div>
-
-<div class="card-body">
-
-<p><b>Definición:</b></p>
-
-<ul>
-
-<li><b>strong</b> indica importancia.</li>
-
-<li><b>em</b> indica énfasis.</li>
-
-</ul>
-
-<pre>
+    <!-- strong y em -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;strong&gt; y &lt;em&gt;</h5>
+      <p><b>Definición:</b></p>
+      <ul>
+        <li><b>strong</b> indica importancia.</li>
+        <li><b>em</b> indica énfasis.</li>
+      </ul>
+      <pre>
 &lt;p&gt;Es &lt;strong&gt;obligatorio&lt;/strong&gt; guardar
-antes de &lt;em&gt;cerrar el editor&lt;/em&gt;.&lt;/p&gt;
-</pre>
+antes de &lt;em&gt;cerrar el editor&lt;/em&gt;.&lt;/p&gt;</pre>
+    </div>
 
-</div>
-
-</div>
-
-
-<!-- SPAN -->
-
-<div class="card shadow-sm mb-4">
-
-<div class="card-header bg-primary text-white">
-&lt;span&gt;
-</div>
-
-<div class="card-body">
-
-<p><b>Definición:</b> Contenedor en línea sin significado semántico.</p>
-
-<pre>
+    <!-- span -->
+    <div class="card p-3 mb-3">
+      <h5>&lt;span&gt;</h5>
+      <p><b>Definición:</b> Contenedor en línea sin significado semántico.</p>
+      <pre>
 &lt;p&gt;El descuento es del
-&lt;span class="resaltado"&gt;30%&lt;/span&gt; hoy.&lt;/p&gt;
-</pre>
+&lt;span class="resaltado"&gt;30%&lt;/span&gt; hoy.&lt;/p&gt;</pre>
+      <p><b>Uso:</b> Aplicar estilos CSS o usar con JavaScript.</p>
+    </div>
 
-<p><b>Uso:</b> Aplicar estilos CSS o usar con JavaScript.</p>
+    <hr>
 
-</div>
+    <p class="text-center text-muted">
+      Blog Educativo - Actividad HTML
+      <br>
+      Karen Daniela Holguin Cruz y Natalia Chala
+    </p>
 
-</div>
+  </div>
 
+  <!-- BOTÓN FLOTANTE -->
+  <button onclick="irArriba()" class="btn btn-success"
+    style="position: fixed; bottom: 30px; right: 30px; border-radius: 50%; width: 50px; height: 50px; font-size: 20px;">
+    ↑
+  </button>
 
-<hr>
-
-<p class="text-center text-muted">
-
-Blog Educativo - Actividad HTML  
-<br>
-Karen Daniela Holguin Cruz y Natalia Chala
-
-</p>
-
-</div>
-
-
-<!-- BOTON FLOTANTE -->
-
-<button onclick="irArriba()" class="btn btn-success"
-
-style="position:fixed; bottom:30px; right:30px; border-radius:50%; width:50px; height:50px; font-size:20px;">
-
-↑
-
-</button>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
