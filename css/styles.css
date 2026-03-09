@@ -3,9 +3,31 @@
    ========================= */
 
 body {
-  font-family: 'Poppins', Arial, sans-serif; 
-  color: #1e3a8a; 
-  background-color: #e8f5e9; /* verde suave */
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #1e3a8a;
+  background-color: #f5f9ff;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+  background: linear-gradient(90deg, #1E3A8A, #0EA5E9, #10B981);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #A7F3D0 !important;
 }
 
 /* =========================
@@ -14,11 +36,11 @@ body {
 
 h1 {
   text-align: center;
-  color: #166534; 
+  color: #166534;
 }
 
 h2 {
-  color: #0d6efd; 
+  color: #0d6efd;
   border-bottom: 2px solid #93c5fd;
   padding-bottom: 5px;
   font-size: 24px;
@@ -26,32 +48,30 @@ h2 {
 }
 
 h3 {
-  color: #198754; 
+  color: #198754;
   font-size: 18px;
   font-weight: 600;
 }
 
+h1, h2, h3, h5 {
+  color: #1e326b;
+  font-weight: 600;
+}
+
 /* =========================
-   CONTENEDORES
+   TARJETAS
    ========================= */
 
-div {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow:4px 10px rgba(37, 0, 247, 0.1);
+.card {
+  background-color: #ffffff;
+  border-left: 5px solid #0d6efd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-/* Tarjetas bootstrap */
-.card, .seccion, .container div{
-  background-color:#ffffff;
-  border-left:5px solid #fdfeff; /* azul */
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 /* =========================
@@ -59,11 +79,11 @@ div {
    ========================= */
 
 pre {
-  background:#ebecf0; 
-  color:#000000;
-  padding:15px;
-  border-radius:8px;
-  overflow-x:auto;
+  background: #ebecf0;
+  color: #000000;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
 }
 
 /* =========================
@@ -83,31 +103,6 @@ p {
 }
 
 /* =========================
-   NAVEGACION
-   ========================= */
-
-nav {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  background: #2563eb; 
-  color: white;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 6px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  background: #16a34a; 
-}
-
-/* =========================
    FORMULARIOS
    ========================= */
 
@@ -120,31 +115,13 @@ input, textarea {
 }
 
 /* =========================
-   BOTONES
-   ========================= */
-
-button {
-  background: #2563eb; 
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #16a34a; 
-}
-
-/* =========================
    FOOTER
    ========================= */
 
 footer {
   text-align: center;
   padding: 15px;
-  background: #1E3A8A; 
+  background: #1E3A8A;
   color: white;
   margin-top: 30px;
   border-radius: 6px;
@@ -154,14 +131,35 @@ footer {
    IMAGENES
    ========================= */
 
-img{
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-@media (max-width: 576px) {
-  .search-wrap { display: none !important; }
+/* =========================
+   BUSCADOR RESPONSIVE
+   ========================= */
+
+#buscador {
+  width: 250px;
+  transition: width 0.3s ease;
 }
+
+@media (max-width: 1200px) {
+  #buscador { width: 200px; }
+}
+
+@media (max-width: 992px) {
+  #buscador { width: 150px; }
+}
+
+@media (max-width: 768px) {
+  #buscador { width: 100px; }
+}
+
+/* =========================
+   RESALTADO BUSCADOR
+   ========================= */
 
 mark {
   background-color: #fcfc62;

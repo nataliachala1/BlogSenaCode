@@ -14,67 +14,7 @@
   <!-- Tu CSS -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <style>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f5f9ff;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: linear-gradient(90deg, #1E3A8A, #0EA5E9, #10B981);
-    }
-
-    .navbar-brand {
-      color: white !important;
-      font-weight: 600;
-    }
-
-    .nav-link {
-      color: white !important;
-      font-weight: 500;
-    }
-
-    .nav-link:hover {
-      color: #A7F3D0 !important;
-    }
-
-    /* Tarjetas */
-    .card {
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    h2 {
-      color: #1E3A8A;
-      font-weight: 600;
-    }
-
-    #buscador {
-      width: 180px;
-      transition: width 0.2s;
-    }
-
-    @media (max-width: 992px) {
-      #buscador { width: 120px; }
-    }
-
-    @media (max-width: 768px) {
-      #buscador { width: 90px; }
-    }
-
-    @media (max-width: 576px) {
-      .search-wrap { display: none !important; }
-    }
-
-  </style>
 </head>
 
 <body>
@@ -98,6 +38,10 @@
     </div>
 
   </nav>
+
+    <div id="resultadosGlobales" class="container mt-3" style="display:none;"></div>
+
+    <div class="container mt-4">
 
   <!-- CONTENIDO -->
   <div class="container mt-4">
@@ -201,8 +145,15 @@
     ↑
   </button>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datosEstructurales.js"></script>
+    <script src="js/datosTexto.js"></script>
+    <script src="js/datosListas.js"></script>
+    <script src="js/datosFormularios.js"></script>
+    <script src="js/datosTablas.js"></script>
+    <script src="js/datosMultimedia.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
